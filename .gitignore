@@ -12,3 +12,5 @@ script_local/
 jupyter_local/
 /.claude
 /.qoder
+/llamafactory_env
+data/converted/merged_graphinstruct.json
