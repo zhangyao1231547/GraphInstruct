@@ -14,3 +14,4 @@ jupyter_local/
 
 /llamafactory_env
 data/converted/merged_graphinstruct.json
+data/training/
