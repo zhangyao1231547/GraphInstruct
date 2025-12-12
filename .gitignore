@@ -11,3 +11,6 @@ dist/
 script_local/
 jupyter_local/
 /.claude
+*.pt
+/llamafactory_env
+data/converted/merged_graphinstruct.json
