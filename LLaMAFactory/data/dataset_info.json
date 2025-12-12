@@ -7,7 +7,7 @@
   },
 
   "BFS-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/BFS-int_id/train.json",
+    "file_name": "reasoning/BFS-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -15,7 +15,7 @@
     }
   },
   "bipartite-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/bipartite-int_id/train.json",
+    "file_name": "reasoning/bipartite-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -23,7 +23,7 @@
     }
   },
   "clustering_coefficient-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/clustering_coefficient-int_id/train.json",
+    "file_name": "reasoning/clustering_coefficient-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -31,7 +31,7 @@
     }
   },
   "common_neighbor-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/common_neighbor-int_id/train.json",
+    "file_name": "reasoning/common_neighbor-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -39,7 +39,7 @@
     }
   },
   "connected_component-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/connected_component-int_id/train.json",
+    "file_name": "reasoning/connected_component-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -47,7 +47,7 @@
     }
   },
   "connectivity-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/connectivity-int_id/train.json",
+    "file_name": "reasoning/connectivity-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -55,7 +55,7 @@
     }
   },
   "cycle-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/cycle-int_id/train.json",
+    "file_name": "reasoning/cycle-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -63,7 +63,7 @@
     }
   },
   "degree-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/degree-int_id/train.json",
+    "file_name": "reasoning/degree-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -71,7 +71,7 @@
     }
   },
   "DFS-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/DFS-int_id/train.json",
+    "file_name": "reasoning/DFS-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -79,7 +79,7 @@
     }
   },
   "diameter-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/diameter-int_id/train.json",
+    "file_name": "reasoning/diameter-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -87,7 +87,7 @@
     }
   },
   "edge-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/edge-int_id/train.json",
+    "file_name": "reasoning/edge-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -95,7 +95,7 @@
     }
   },
   "jaccard-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/jaccard-int_id/train.json",
+    "file_name": "reasoning/jaccard-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -103,7 +103,7 @@
     }
   },
   "maximum_flow-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/maximum_flow-int_id/train.json",
+    "file_name": "reasoning/maximum_flow-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -111,7 +111,7 @@
     }
   },
   "MST-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/MST-int_id/train.json",
+    "file_name": "reasoning/MST-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -119,7 +119,7 @@
     }
   },
   "neighbor-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/neighbor-int_id/train.json",
+    "file_name": "reasoning/neighbor-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -127,7 +127,7 @@
     }
   },
   "page_rank-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/page_rank-int_id/train.json",
+    "file_name": "reasoning/page_rank-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -135,7 +135,7 @@
     }
   },
   "predecessor-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/predecessor-int_id/train.json",
+    "file_name": "reasoning/predecessor-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -143,7 +143,7 @@
     }
   },
   "shortest_path-reason": {
-    "file_name": "LLaMA-Factory/data/reasoning/shortest_path-int_id/train.json",
+    "file_name": "reasoning/shortest_path-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
@@ -151,7 +151,7 @@
     }
   },
   "topological_sort": {
-    "file_name": "LLaMA-Factory/data/reasoning/topological_sort-int_id/train.json",
+    "file_name": "reasoning/topological_sort-int_id/train.json",
     "columns": {
       "prompt": "instruction",
       "query": "input",
