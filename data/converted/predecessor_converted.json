@@ -1,0 +1,917 @@
+[
+  {
+    "id": "graphinstruct_predecessor_0",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "edge_index": [
+        [
+          4,
+          4,
+          4,
+          9,
+          9,
+          9,
+          10,
+          10,
+          10,
+          6,
+          6,
+          6,
+          6,
+          3,
+          8,
+          8,
+          8,
+          1,
+          1,
+          1,
+          1,
+          0,
+          7,
+          7,
+          2,
+          2,
+          2,
+          11,
+          12,
+          12
+        ],
+        [
+          9,
+          10,
+          5,
+          6,
+          3,
+          5,
+          2,
+          8,
+          0,
+          7,
+          3,
+          4,
+          8,
+          7,
+          1,
+          0,
+          7,
+          0,
+          2,
+          5,
+          9,
+          2,
+          3,
+          8,
+          11,
+          5,
+          10,
+          12,
+          4,
+          10
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 4 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [8, 6, 3] connect to node 7, so the predecessor nodes of node 7 are  <<<[8, 6, 3]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 4
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_1",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edge_index": [
+        [
+          0,
+          0,
+          2,
+          2,
+          7,
+          4,
+          8,
+          5,
+          10,
+          10,
+          6,
+          1,
+          9,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          7,
+          8,
+          9,
+          1,
+          8,
+          6,
+          10,
+          3,
+          5,
+          8,
+          7,
+          0,
+          7,
+          4,
+          5,
+          8
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 0 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [4, 2, 3, 6] connect to node 8, so the predecessor nodes of node 8 are  <<<[4, 2, 3, 6]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 0
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_2",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "edge_index": [
+        [
+          8,
+          6,
+          7,
+          4,
+          4,
+          4,
+          4,
+          1,
+          1,
+          5,
+          5,
+          5,
+          3,
+          3,
+          3,
+          0,
+          0
+        ],
+        [
+          6,
+          4,
+          8,
+          1,
+          5,
+          7,
+          2,
+          5,
+          2,
+          7,
+          2,
+          3,
+          6,
+          8,
+          2,
+          6,
+          7
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 8 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [4] connect to node 1, so the predecessor nodes of node 1 are  <<<[4]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 8
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_3",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edge_index": [
+        [
+          10,
+          10,
+          10,
+          1,
+          7,
+          7,
+          8,
+          4,
+          9,
+          9,
+          9,
+          5,
+          5,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          1,
+          7,
+          8,
+          4,
+          2,
+          0,
+          7,
+          9,
+          7,
+          8,
+          10,
+          7,
+          4,
+          5,
+          3,
+          8,
+          1,
+          9,
+          7,
+          2,
+          8,
+          5,
+          6,
+          0
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 10 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [7, 3] connect to node 0, so the predecessor nodes of node 0 are  <<<[7, 3]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 10
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_4",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "edge_index": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          4,
+          8,
+          8,
+          9,
+          9,
+          9,
+          9,
+          2,
+          2,
+          2,
+          2,
+          6,
+          6,
+          0,
+          0,
+          5,
+          5,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          4,
+          8,
+          9,
+          2,
+          6,
+          9,
+          6,
+          1,
+          5,
+          1,
+          2,
+          1,
+          4,
+          7,
+          4,
+          8,
+          5,
+          7,
+          8,
+          5,
+          9,
+          2,
+          7,
+          3,
+          9,
+          2,
+          6,
+          4,
+          3
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 1 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [4, 8, 9] connect to node 1, so the predecessor nodes of node 1 are  <<<[4, 8, 9]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 1
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_5",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "edge_index": [
+        [
+          5,
+          5,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          6,
+          6,
+          6,
+          6,
+          4,
+          4,
+          4,
+          7,
+          7,
+          7,
+          7,
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          1,
+          6,
+          4,
+          6,
+          4,
+          3,
+          5,
+          0,
+          4,
+          3,
+          5,
+          7,
+          3,
+          1,
+          6,
+          0,
+          1,
+          2,
+          6,
+          3,
+          1,
+          2,
+          3,
+          5,
+          7,
+          6,
+          5,
+          0,
+          1,
+          0,
+          1,
+          2,
+          4
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 5 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [7, 0, 3] connect to node 2, so the predecessor nodes of node 2 are  <<<[7, 0, 3]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 5
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_6",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edge_index": [
+        [
+          4,
+          4,
+          4,
+          6,
+          6,
+          7,
+          7,
+          7,
+          7,
+          9,
+          5,
+          5,
+          5,
+          2,
+          0,
+          0,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          8,
+          8,
+          8
+        ],
+        [
+          6,
+          7,
+          9,
+          3,
+          10,
+          8,
+          5,
+          2,
+          1,
+          0,
+          2,
+          7,
+          9,
+          0,
+          1,
+          7,
+          5,
+          2,
+          6,
+          0,
+          8,
+          7,
+          4,
+          2,
+          9,
+          1,
+          0
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 4 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [7, 3] connect to node 8, so the predecessor nodes of node 8 are  <<<[7, 3]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 4
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_7",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edge_index": [
+        [
+          1,
+          1,
+          6,
+          3,
+          3,
+          3,
+          0,
+          0,
+          0,
+          5,
+          5,
+          5,
+          9,
+          9,
+          9,
+          9,
+          2,
+          2,
+          2,
+          2,
+          10,
+          8,
+          11,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          6,
+          4,
+          0,
+          5,
+          1,
+          8,
+          9,
+          10,
+          11,
+          0,
+          6,
+          2,
+          5,
+          1,
+          7,
+          4,
+          8,
+          7,
+          11,
+          8,
+          2,
+          2,
+          5,
+          7,
+          9,
+          11
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 1 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [0, 4] connect to node 9, so the predecessor nodes of node 9 are  <<<[0, 4]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 1
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_8",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edge_index": [
+        [
+          6,
+          6,
+          6,
+          6,
+          7,
+          7,
+          2,
+          2,
+          2,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          10,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          11,
+          11,
+          11,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          8,
+          8,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          5,
+          5,
+          5,
+          9
+        ],
+        [
+          7,
+          2,
+          10,
+          4,
+          11,
+          4,
+          10,
+          0,
+          11,
+          4,
+          8,
+          6,
+          7,
+          3,
+          11,
+          2,
+          6,
+          7,
+          0,
+          11,
+          5,
+          10,
+          9,
+          6,
+          0,
+          1,
+          4,
+          8,
+          4,
+          8,
+          6,
+          7,
+          2,
+          7,
+          5,
+          5,
+          1,
+          10,
+          8,
+          6,
+          7,
+          1,
+          9,
+          3,
+          5
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 6 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [3, 11, 1, 10, 4] connect to node 6, so the predecessor nodes of node 6 are  <<<[3, 11, 1, 10, 4]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 6
+    }
+  },
+  {
+    "id": "graphinstruct_predecessor_9",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "edge_index": [
+        [
+          2,
+          2,
+          0,
+          0,
+          6,
+          6,
+          6,
+          3,
+          5,
+          7,
+          7,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          0,
+          6,
+          7,
+          4,
+          5,
+          7,
+          0,
+          5,
+          3,
+          1,
+          2,
+          0,
+          6,
+          5,
+          1,
+          2
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "给定以下有向图结构:\n<graph>\n\n请列出节点 2 的所有前驱节点。"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes [5] connect to node 3, so the predecessor nodes of node 3 are  <<<[5]>>>"
+      }
+    ],
+    "task_type": "PREDECESSOR",
+    "task_params": {
+      "node": 2
+    }
+  }
+]

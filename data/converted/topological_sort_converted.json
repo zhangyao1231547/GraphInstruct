@@ -1,0 +1,851 @@
+[
+  {
+    "id": "graphinstruct_topological_sort_0",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "edge_index": [
+        [
+          11,
+          11,
+          11,
+          11,
+          11,
+          11,
+          1,
+          5,
+          5,
+          5,
+          9,
+          9,
+          9,
+          0,
+          0,
+          0,
+          0,
+          10,
+          10,
+          7,
+          8,
+          8,
+          8,
+          2,
+          2,
+          6,
+          4
+        ],
+        [
+          1,
+          5,
+          12,
+          9,
+          0,
+          10,
+          5,
+          8,
+          3,
+          4,
+          7,
+          1,
+          8,
+          10,
+          12,
+          8,
+          1,
+          12,
+          7,
+          1,
+          6,
+          12,
+          3,
+          10,
+          12,
+          12,
+          3
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [11, 2].\nVisit node 11 and remove it from the graph.\nNodes with 0 in-degree: [2, 9, 0].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [9, 0].\nVisit node 9 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [10].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [7].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [5].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [8, 4].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [4, 6].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [6, 3].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [3, 12].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [12].\nVisit node 12 and remove it from the graph.\nSo the result of topological sorting is  <<<[11, 2, 9, 0, 10, 7, 1, 5, 8, 4, 6, 3, 12]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_1",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "edge_index": [
+        [
+          5,
+          3,
+          3,
+          3,
+          9,
+          9,
+          9,
+          9,
+          9,
+          8,
+          8,
+          8,
+          10,
+          12,
+          12,
+          14,
+          14,
+          14,
+          11,
+          11,
+          11,
+          11,
+          0,
+          0,
+          6,
+          6,
+          6,
+          6,
+          4,
+          13,
+          13,
+          13,
+          13,
+          13,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          9,
+          7,
+          8,
+          10,
+          1,
+          12,
+          7,
+          5,
+          12,
+          11,
+          7,
+          7,
+          5,
+          4,
+          1,
+          11,
+          7,
+          5,
+          4,
+          9,
+          7,
+          1,
+          11,
+          4,
+          13,
+          9,
+          11,
+          1,
+          3,
+          7,
+          8,
+          0,
+          4,
+          11,
+          7,
+          3,
+          6
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [14, 2].\nVisit node 14 and remove it from the graph.\nNodes with 0 in-degree: [2].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [6].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [13].\nVisit node 13 and remove it from the graph.\nNodes with 0 in-degree: [3, 0].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [0, 8].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [8].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [11].\nVisit node 11 and remove it from the graph.\nNodes with 0 in-degree: [9].\nVisit node 9 and remove it from the graph.\nNodes with 0 in-degree: [10, 12].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [12, 7].\nVisit node 12 and remove it from the graph.\nNodes with 0 in-degree: [7, 5, 4].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [5, 4].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nSo the result of topological sorting is  <<<[14, 2, 6, 13, 3, 0, 8, 11, 9, 10, 12, 7, 5, 4, 1]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_2",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edge_index": [
+        [
+          6,
+          6,
+          5,
+          5,
+          0,
+          0,
+          9,
+          9,
+          8,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          3,
+          3,
+          10
+        ],
+        [
+          5,
+          0,
+          9,
+          8,
+          1,
+          7,
+          0,
+          2,
+          10,
+          0,
+          1,
+          8,
+          5,
+          3,
+          10,
+          0,
+          6,
+          0
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [3].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [6].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [5].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [9].\nVisit node 9 and remove it from the graph.\nNodes with 0 in-degree: [2].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [8].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [10].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [1, 7].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [7].\nVisit node 7 and remove it from the graph.\nSo the result of topological sorting is  <<<[4, 3, 6, 5, 9, 2, 8, 10, 0, 1, 7]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_3",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "edge_index": [
+        [
+          4,
+          4,
+          1,
+          2,
+          2,
+          5,
+          3,
+          3,
+          3,
+          3,
+          7,
+          7,
+          7,
+          0,
+          0
+        ],
+        [
+          6,
+          1,
+          6,
+          5,
+          3,
+          4,
+          4,
+          5,
+          7,
+          6,
+          0,
+          4,
+          1,
+          5,
+          6
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [2].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [3].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [7].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [5].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [6].\nVisit node 6 and remove it from the graph.\nSo the result of topological sorting is  <<<[2, 3, 7, 0, 5, 4, 1, 6]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_4",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "edge_index": [
+        [
+          3,
+          8,
+          8,
+          8,
+          7,
+          6,
+          6,
+          4,
+          4,
+          4,
+          0,
+          0,
+          0,
+          0,
+          5,
+          5,
+          5,
+          5,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          7,
+          6,
+          4,
+          1,
+          7,
+          3,
+          1,
+          3,
+          7,
+          8,
+          1,
+          6,
+          4,
+          8,
+          6,
+          3,
+          7,
+          4,
+          7,
+          8,
+          3
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [0, 5, 2].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [5, 2].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [2].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [8].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [6, 4].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [3, 7].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [7].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nSo the result of topological sorting is  <<<[0, 5, 2, 8, 6, 4, 3, 7, 1]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_5",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "edge_index": [
+        [
+          4,
+          2,
+          0,
+          9,
+          9,
+          5,
+          5,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          6,
+          6,
+          7,
+          7
+        ],
+        [
+          2,
+          0,
+          8,
+          5,
+          1,
+          0,
+          1,
+          4,
+          2,
+          3,
+          4,
+          0,
+          8,
+          3,
+          1,
+          2,
+          4
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [9, 6, 7].\nVisit node 9 and remove it from the graph.\nNodes with 0 in-degree: [6, 7, 5].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [7, 5].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [5].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [3].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [2].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [8].\nVisit node 8 and remove it from the graph.\nSo the result of topological sorting is  <<<[9, 6, 7, 5, 1, 3, 4, 2, 0, 8]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_6",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "edge_index": [
+        [
+          7,
+          7,
+          7,
+          0,
+          12,
+          12,
+          12,
+          12,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          2,
+          2,
+          2,
+          8,
+          10,
+          5,
+          11
+        ],
+        [
+          0,
+          1,
+          9,
+          9,
+          7,
+          9,
+          6,
+          3,
+          1,
+          7,
+          10,
+          7,
+          6,
+          0,
+          1,
+          12,
+          8,
+          0,
+          0,
+          9,
+          7,
+          10
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [4, 2, 5, 11].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [2, 5, 11].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [5, 11, 12, 8].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [11, 12, 8].\nVisit node 11 and remove it from the graph.\nNodes with 0 in-degree: [12, 8].\nVisit node 12 and remove it from the graph.\nNodes with 0 in-degree: [8, 6, 3].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [6, 3].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [3].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [7, 10].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [10, 0, 1].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [0, 1].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [1, 9].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [9].\nVisit node 9 and remove it from the graph.\nSo the result of topological sorting is  <<<[4, 2, 5, 11, 12, 8, 6, 3, 7, 10, 0, 1, 9]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_7",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edge_index": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          10,
+          10,
+          10,
+          0,
+          0,
+          5,
+          5,
+          5,
+          5,
+          2,
+          6,
+          6,
+          4,
+          4,
+          4,
+          4,
+          8,
+          8,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          11,
+          9,
+          10,
+          0,
+          5,
+          2,
+          9,
+          2,
+          11,
+          10,
+          11,
+          9,
+          10,
+          3,
+          11,
+          9,
+          9,
+          0,
+          2,
+          6,
+          10,
+          8,
+          9,
+          10,
+          8,
+          2,
+          4,
+          10,
+          0,
+          2,
+          3,
+          7,
+          9
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [7].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [5].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [3].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [6, 8].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [8, 0].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [10].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [2, 11].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [11, 9].\nVisit node 11 and remove it from the graph.\nNodes with 0 in-degree: [9].\nVisit node 9 and remove it from the graph.\nSo the result of topological sorting is  <<<[1, 7, 5, 3, 4, 6, 8, 0, 10, 2, 11, 9]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_8",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "edge_index": [
+        [
+          9,
+          10,
+          0,
+          3,
+          3,
+          13,
+          13,
+          11,
+          11,
+          7,
+          7,
+          12,
+          12,
+          4,
+          8,
+          8,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          0,
+          4,
+          13,
+          11,
+          5,
+          10,
+          5,
+          12,
+          11,
+          6,
+          4,
+          9,
+          5,
+          2,
+          9,
+          3,
+          9,
+          6,
+          0,
+          10,
+          2,
+          11,
+          7
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [8, 1].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nNodes with 0 in-degree: [2, 7].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [7, 3].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [3, 6].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [6, 13, 11].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [13, 11].\nVisit node 13 and remove it from the graph.\nNodes with 0 in-degree: [11].\nVisit node 11 and remove it from the graph.\nNodes with 0 in-degree: [12].\nVisit node 12 and remove it from the graph.\nNodes with 0 in-degree: [9].\nVisit node 9 and remove it from the graph.\nNodes with 0 in-degree: [10].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [4].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [5].\nVisit node 5 and remove it from the graph.\nSo the result of topological sorting is  <<<[8, 1, 2, 7, 3, 6, 13, 11, 12, 9, 10, 0, 4, 5]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  },
+  {
+    "id": "graphinstruct_topological_sort_9",
+    "graph": {
+      "node_list": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "edge_index": [
+        [
+          4,
+          4,
+          4,
+          10,
+          6,
+          7,
+          7,
+          8,
+          8,
+          3,
+          3,
+          9,
+          9,
+          0,
+          0,
+          0,
+          5,
+          2,
+          2,
+          2
+        ],
+        [
+          10,
+          6,
+          7,
+          8,
+          0,
+          3,
+          0,
+          6,
+          0,
+          11,
+          1,
+          11,
+          7,
+          1,
+          5,
+          3,
+          11,
+          6,
+          0,
+          10
+        ]
+      ],
+      "is_directed": true
+    },
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<graph>\n\nThe following is a question related to the graph reasoning task TOPOLOGICAL_SORT. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [4,2,5,0], please format your answer as <<<[4,2,5,0]>>>. \nGiven a directed graph with the following connections:"
+      },
+      {
+        "from": "gpt",
+        "value": "Let's solve it step by step.\nNodes with 0 in-degree: [4, 9, 2].\nVisit node 4 and remove it from the graph.\nNodes with 0 in-degree: [9, 2].\nVisit node 9 and remove it from the graph.\nNodes with 0 in-degree: [2, 7].\nVisit node 2 and remove it from the graph.\nNodes with 0 in-degree: [7, 10].\nVisit node 7 and remove it from the graph.\nNodes with 0 in-degree: [10].\nVisit node 10 and remove it from the graph.\nNodes with 0 in-degree: [8].\nVisit node 8 and remove it from the graph.\nNodes with 0 in-degree: [6].\nVisit node 6 and remove it from the graph.\nNodes with 0 in-degree: [0].\nVisit node 0 and remove it from the graph.\nNodes with 0 in-degree: [5, 3].\nVisit node 5 and remove it from the graph.\nNodes with 0 in-degree: [3].\nVisit node 3 and remove it from the graph.\nNodes with 0 in-degree: [11, 1].\nVisit node 11 and remove it from the graph.\nNodes with 0 in-degree: [1].\nVisit node 1 and remove it from the graph.\nSo the result of topological sorting is  <<<[4, 9, 2, 7, 10, 8, 6, 0, 5, 3, 11, 1]>>>"
+      }
+    ],
+    "task_type": "TOPOLOGICAL_SORT",
+    "task_params": {}
+  }
+]
