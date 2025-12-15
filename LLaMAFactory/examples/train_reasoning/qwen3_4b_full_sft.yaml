@@ -1,0 +1,36 @@
+### model
+model_name_or_path: /nvme0/work/workspaces-zy/model/Qwen3-4B-Instruct-2507/Qwen/Qwen3-4B-Instruct-2507
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z2_config.json
+
+### dataset - all 19 graph reasoning tasks (190,000 total samples)
+dataset: BFS-reason,bipartite-reason,clustering_coefficient-reason,common_neighbor-reason,connected_component-reason,connectivity-reason,cycle-reason,degree-reason,DFS-reason,diameter-reason,edge-reason,jaccard-reason,maximum_flow-reason,MST-reason,neighbor-reason,page_rank-reason,predecessor-reason,shortest_path-reason,topological_sort
+template: qwen3
+cutoff_len: 512
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: /mnt/yrfs/GraphInstruct/model/qwen3-4b-graph-reasoning-full
+logging_steps: 50
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: true
+report_to: none
+
+### train
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
