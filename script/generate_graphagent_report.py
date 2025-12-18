@@ -291,6 +291,8 @@ def main():
                         help='Output path for the report')
     parser.add_argument('--max-new-tokens', type=int, default=1024,
                         help='max_new_tokens setting used in evaluation')
+    parser.add_argument('--language', type=str, default='zh', choices=['zh', 'en'],
+                        help='Report language (zh=Chinese, en=English)')
 
     args = parser.parse_args()
 

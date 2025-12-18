@@ -16,3 +16,4 @@ jupyter_local/
 data/converted/merged_graphinstruct.json
 data/training/
 data/test
+data/eval/
