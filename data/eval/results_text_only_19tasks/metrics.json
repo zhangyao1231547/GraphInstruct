@@ -1,0 +1,223 @@
+{
+  "model": "Qwen3-4B-Instruct (Original)",
+  "total": 190,
+  "correct": 36,
+  "accuracy": 0.18947368421052632,
+  "exact_match": 0,
+  "partial_match": 0,
+  "exact_match_rate": 0.0,
+  "partial_match_rate": 0.0,
+  "by_task": {
+    "BFS": {
+      "total": 10,
+      "correct": 0
+    },
+    "DFS": {
+      "total": 10,
+      "correct": 0
+    },
+    "bipartite": {
+      "total": 10,
+      "correct": 0
+    },
+    "clustering_coefficient": {
+      "total": 10,
+      "correct": 1
+    },
+    "common_neighbor": {
+      "total": 10,
+      "correct": 5
+    },
+    "connected_component": {
+      "total": 10,
+      "correct": 0
+    },
+    "connectivity": {
+      "total": 10,
+      "correct": 2
+    },
+    "cycle": {
+      "total": 10,
+      "correct": 0
+    },
+    "degree": {
+      "total": 10,
+      "correct": 10
+    },
+    "diameter": {
+      "total": 10,
+      "correct": 0
+    },
+    "edge": {
+      "total": 10,
+      "correct": 10
+    },
+    "jaccard": {
+      "total": 10,
+      "correct": 1
+    },
+    "maximum_flow": {
+      "total": 10,
+      "correct": 0
+    },
+    "MST": {
+      "total": 10,
+      "correct": 0
+    },
+    "neighbor": {
+      "total": 10,
+      "correct": 6
+    },
+    "page_rank": {
+      "total": 10,
+      "correct": 0
+    },
+    "predecessor": {
+      "total": 10,
+      "correct": 1
+    },
+    "shortest_path": {
+      "total": 10,
+      "correct": 0
+    },
+    "topological_sort": {
+      "total": 10,
+      "correct": 0
+    }
+  },
+  "by_task_type": {
+    "BFS": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "DFS": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "bipartite": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "clustering_coefficient": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "common_neighbor": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "connected_component": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "connectivity": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "cycle": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "degree": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "diameter": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "edge": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "jaccard": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "maximum_flow": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "MST": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "neighbor": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "page_rank": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "predecessor": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "shortest_path": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    },
+    "topological_sort": {
+      "total": 10,
+      "exact_match": 0,
+      "partial_match": 0,
+      "exact_match_rate": 0.0,
+      "partial_match_rate": 0.0
+    }
+  }
+}
