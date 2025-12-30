@@ -22,12 +22,25 @@ import argparse
 import logging
 from datetime import datetime
 from typing import Dict, List, Optional
+import numpy as np
 
 # 添加项目根目录到路径
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from GTG.utils.utils import set_random_seed
 from GTG.utils.language import LANG_EN, LANG_ZH, get_task_templates, graph_to_natural_language_multilang
+
+
+class NumpyEncoder(json.JSONEncoder):
+    """自定义JSON编码器，处理numpy类型"""
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        elif isinstance(obj, np.floating):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super().default(obj)
 
 # 设置日志
 logging.basicConfig(
@@ -167,7 +180,7 @@ def generate_dataset(
     output_path = os.path.join(output_dir, output_filename)
 
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(all_samples, f, indent=2, ensure_ascii=False)
+        json.dump(all_samples, f, indent=2, ensure_ascii=False, cls=NumpyEncoder)
 
     logger.info(f"\n{'='*60}")
     logger.info("Generation Statistics:")

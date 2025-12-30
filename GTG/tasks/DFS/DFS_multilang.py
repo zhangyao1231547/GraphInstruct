@@ -55,37 +55,12 @@ def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_
 
 def question_generation_multilang(config, g, lang=LANG_EN):
     """生成DFS问题 (支持多语言)"""
+    import random
     templates = get_task_templates(TASK_NAME, lang)
 
-    # 使用原始函数获取问题参数
-    ques, _ = question_generation(config, g)
-
-    # 根据模板生成多语言问题
-    if 'question' in templates and templates['question']:
-        try:
-            # 尝试使用模板格式化
-            if task_name == 'BFS' or task_name == 'DFS':
-                ques_str = templates['question'].format(NID(ques.get('start', 0)))
-            elif task_name == 'degree' or task_name == 'neighbor' or task_name == 'clustering_coefficient':
-                ques_str = templates['question'].format(NID(ques.get('u', 0)))
-            elif task_name == 'connectivity' or task_name == 'edge' or task_name == 'common_neighbor' or task_name == 'jaccard':
-                ques_str = templates['question'].format(NID(ques.get('u', 0)), NID(ques.get('v', 0)))
-            elif task_name == 'shortest_path' or task_name == 'maximum_flow':
-                ques_str = templates['question'].format(NID(ques.get('source', 0)), NID(ques.get('target', 0)))
-            elif task_name == 'predecessor':
-                ques_str = templates['question'].format(NID(ques.get('source', 0)), NID(ques.get('target', 0)))
-            elif task_name == 'connected_component':
-                ques_str = templates['question'].format(NID(ques.get('u', 0)))
-            elif task_name == 'page_rank':
-                ques_str = templates['question'].format(ques.get('damping', 0.85), ques.get('iterations', 10))
-            else:
-                # 对于没有参数的问题
-                ques_str = templates['question']
-        except:
-            # 如果格式化失败，使用原始英文
-            _, ques_str = question_generation(config, g)
-    else:
-        _, ques_str = question_generation(config, g)
+    v = random.randint(0, g.number_of_nodes() - 1)
+    ques = {'start': v}
+    ques_str = templates['question'].format(NID(ques['start']))
 
     return ques, ques_str
 
@@ -93,18 +68,10 @@ def question_generation_multilang(config, g, lang=LANG_EN):
 def answer_and_inference_steps_generation_multilang(config, g, ques, lang=LANG_EN):
     """生成DFS推理步骤和答案 (支持多语言)"""
     templates = get_task_templates(TASK_NAME, lang)
-
-    # 使用原始函数获取答案
     steps_str_en, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques)
 
-    # 如果是中文，替换关键词
-    if lang == LANG_ZH and 'steps_start' in templates:
-        steps_str = templates.get('steps_start', steps_str_en)
-        # 可以在这里添加更多的步骤翻译逻辑
-        if 'result' in templates:
-            steps_str += templates['result']
-    else:
-        steps_str = steps_str_en
+    steps_str = templates['steps_start']
+    steps_str += templates['result']
 
     return steps_str, ans, ans_str, reject
 

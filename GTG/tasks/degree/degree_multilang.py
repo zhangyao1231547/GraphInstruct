@@ -55,37 +55,18 @@ def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_
 
 def question_generation_multilang(config, g, lang=LANG_EN):
     """生成degree问题 (支持多语言)"""
+    import random
     templates = get_task_templates(TASK_NAME, lang)
 
-    # 使用原始函数获取问题参数
-    ques, _ = question_generation(config, g)
+    num_nodes = g.number_of_nodes()
+    node = random.randint(0, num_nodes - 1)
+    ques = {'u': node}
 
-    # 根据模板生成多语言问题
-    if 'question' in templates and templates['question']:
-        try:
-            # 尝试使用模板格式化
-            if task_name == 'BFS' or task_name == 'DFS':
-                ques_str = templates['question'].format(NID(ques.get('start', 0)))
-            elif task_name == 'degree' or task_name == 'neighbor' or task_name == 'clustering_coefficient':
-                ques_str = templates['question'].format(NID(ques.get('u', 0)))
-            elif task_name == 'connectivity' or task_name == 'edge' or task_name == 'common_neighbor' or task_name == 'jaccard':
-                ques_str = templates['question'].format(NID(ques.get('u', 0)), NID(ques.get('v', 0)))
-            elif task_name == 'shortest_path' or task_name == 'maximum_flow':
-                ques_str = templates['question'].format(NID(ques.get('source', 0)), NID(ques.get('target', 0)))
-            elif task_name == 'predecessor':
-                ques_str = templates['question'].format(NID(ques.get('source', 0)), NID(ques.get('target', 0)))
-            elif task_name == 'connected_component':
-                ques_str = templates['question'].format(NID(ques.get('u', 0)))
-            elif task_name == 'page_rank':
-                ques_str = templates['question'].format(ques.get('damping', 0.85), ques.get('iterations', 10))
-            else:
-                # 对于没有参数的问题
-                ques_str = templates['question']
-        except:
-            # 如果格式化失败，使用原始英文
-            _, ques_str = question_generation(config, g)
+    # 有向图使用出度问题
+    if g.is_directed():
+        ques_str = templates.get('question_directed', templates['question']).format(NID(node))
     else:
-        _, ques_str = question_generation(config, g)
+        ques_str = templates['question'].format(NID(node))
 
     return ques, ques_str
 
@@ -94,17 +75,30 @@ def answer_and_inference_steps_generation_multilang(config, g, ques, lang=LANG_E
     """生成degree推理步骤和答案 (支持多语言)"""
     templates = get_task_templates(TASK_NAME, lang)
 
-    # 使用原始函数获取答案
-    steps_str_en, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques)
+    node = ques['u']
+    u_nei = list(g.neighbors(node))
 
-    # 如果是中文，替换关键词
-    if lang == LANG_ZH and 'steps_start' in templates:
-        steps_str = templates.get('steps_start', steps_str_en)
-        # 可以在这里添加更多的步骤翻译逻辑
-        if 'result' in templates:
-            steps_str += templates['result']
+    steps_str = templates['steps_start']
+
+    # 有向图显示后继节点，无向图显示邻居节点
+    if g.is_directed():
+        steps_str += templates.get('neighbors_directed', templates['neighbors']).format(
+            NID(node), NID(u_nei), len(u_nei)
+        )
     else:
-        steps_str = steps_str_en
+        steps_str += templates['neighbors'].format(NID(node), NID(u_nei), len(u_nei))
+
+    steps_str += templates['result'].format(NID(node))
+
+    ans = len(u_nei)
+    ans_str = str(ans)
+
+    # 检查是否需要拒绝（度为0的样本不超过20%）
+    reject = False
+    if ans == 0:
+        import random
+        if random.random() > 0.2:
+            reject = True
 
     return steps_str, ans, ans_str, reject
 
@@ -121,24 +115,13 @@ def generate_a_sample_multilang(config, lang=LANG_EN):
         样本字典
     """
     g = graph_generation(config)
-
-    # 尝试使用多语言版本，如果没有则使用原始版本
-    try:
-        ques, ques_str = question_generation_multilang(config, g, lang)
-        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, lang)
-    except:
-        # 回退到原始英文版本
-        ques, ques_str = question_generation(config, g)
-        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques)
+    ques, ques_str = question_generation_multilang(config, g, lang)
+    steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, lang)
 
     while reject:
         g = graph_generation(config)
-        try:
-            ques, ques_str = question_generation_multilang(config, g, lang)
-            steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, lang)
-        except:
-            ques, ques_str = question_generation(config, g)
-            steps_str, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques)
+        ques, ques_str = question_generation_multilang(config, g, lang)
+        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, lang)
 
     choi_str, label_str = choices_generation(config, g, ques, ans)
 

@@ -20,11 +20,13 @@ import logging
 from typing import Dict, List, Optional
 from tqdm import tqdm
 import argparse
-
+from sklearn.decomposition import PCA
 import torch
 import transformers
 from torch_geometric.data import HeteroData
 from sample_graph_tokenizer import SampleGraphTokenizer
+import torch
+import numpy as np
 # 添加 GraphAgent 训练代码路径
 GRAPHAGENT_TRAINING_PATH = "/nvme0/work/workspaces-zy/GraphAgent-zy/GraphAGent-training"
 sys.path.insert(0, GRAPHAGENT_TRAINING_PATH)
@@ -229,6 +231,7 @@ class QwenGraphInstructDataPreparer:
 
         return input_ids, targets
 
+
     def _create_hetero_data(self, graph_info: Dict) -> HeteroData:
         """从 graph_info 创建 HeteroData 图数据"""
         node_list = graph_info.get('node_list', [])
@@ -238,9 +241,71 @@ class QwenGraphInstructDataPreparer:
 
         # 创建 HeteroData 对象
         hetero_data = HeteroData()
+        diverse_texts = [
+            # 1-10: 不同领域的专业术语
+            "量子纠缠理论表明，两个量子粒子无论相距多远都会保持状态相关性。",
+            "深度神经网络的反向传播算法通过梯度下降优化权重参数以减少损失函数。",
+            "资产负债表遵循会计恒等式：资产 = 负债 + 所有者权益。",
+            "牛顿第二定律表述为：物体加速度与作用力成正比，与质量成反比。",
+            "民法典第1024条规定了自然人的名誉权受法律保护。",
+            "光合作用的光反应阶段发生在叶绿体的类囊体膜上。",
+            "相对论的时间膨胀效应表明，运动物体上的时间流逝会变慢。",
+            "供应链管理的核心是优化从原材料采购到最终产品的物流和信息流。",
+            "文艺复兴时期的艺术特点包括透视法的运用和人本主义的复兴。",
+            "分布式系统的CAP定理指出一致性、可用性和分区容错性不可兼得。",
 
+            # 11-20: 日常生活和情感表达
+            "清晨的咖啡香气总能唤醒我沉睡的感官，开始新的一天。",
+            "远方传来火车的汽笛声，勾起我对故乡的深深思念。",
+            "雨滴敲打窗户的声音像自然的交响乐，让人心情平静。",
+            "烤面包的焦香混合着黄油融化时的温暖气息，是家的味道。",
+            "孩子第一次学会走路时的蹒跚步伐，是生命最动人的诗篇。",
+            "黄昏时分天空从橙红渐变为深紫，是大自然最慷慨的馈赠。",
+            "旧书页里夹着的干枯花瓣，诉说着一段被遗忘的故事。",
+            "海风带着咸涩的味道，吹散了夏日的炎热和心中的烦恼。",
+            "深夜电台播放的老歌，让时光倒流回青春的记忆长廊。",
+            "初雪悄然落下，覆盖了大地，也净化了浮躁的心灵。",
+
+            # 21-30: 抽象概念和哲学思考
+            "存在与虚无之间的辩证关系构成了人类意识的本质矛盾。",
+            "时间的箭头单向流逝，但记忆却能逆向重构过去的片段。",
+            "语言不仅是沟通工具，更是构建现实认知的符号系统。",
+            "自由的边界在于不侵犯他人同等权利的道德约束。",
+            "美的标准是相对的，随文化语境和历史变迁而不断演化。",
+            "命运如同交织的网，每个选择都是编织新路径的丝线。",
+            "孤独不是缺乏陪伴，而是在人群中仍感觉灵魂相隔千里。",
+            "梦境是潜意识在睡眠中对现实经验的解构与重组。",
+            "真理往往隐藏在表象之下，需要理性的利剑去刺破迷雾。",
+            "希望是黑暗中微弱的光，虽不耀眼却足以指引前行的方向。",
+
+            # 31-40: 技术和未来展望
+            "人工智能的生成对抗网络通过判别器和生成器的博弈提升创造力。",
+            "区块链的去中心化特性确保了交易记录的不可篡改性和透明性。",
+            "CRISPR基因编辑技术像分子剪刀，精确修改DNA序列的革命性工具。",
+            "自动驾驶汽车的传感器融合技术整合了激光雷达、摄像头和毫米波雷达数据。",
+            "元宇宙构建的虚拟世界将重构社交互动和数字身份的概念边界。",
+            "脑机接口技术试图建立大脑与外部设备间的直接通信通道。",
+            "可再生能源中的聚变反应模拟太阳的能量产生机制。",
+            "量子计算机利用叠加态和纠缠态实现指数级并行计算能力。",
+            "合成生物学设计人工生物系统解决医疗和环境挑战。",
+            "扩展现实技术模糊了物理世界与数字世界的感知界限。",
+
+            # 41-45: 文化和艺术描述
+            "印象派绘画捕捉光线变化的瞬间，用色彩斑点代替精确轮廓。",
+            "古典交响乐的和声进行遵循功能调性系统的张力与解决规律。",
+            "意识流小说打破线性叙事，模仿思维的自由联想过程。",
+            "日本俳句以十七音捕捉自然季语的刹那美感。",
+            "哥特式建筑的高耸尖拱和飞扶壁体现向上超越的宗教精神。",
+
+            # 46-50: 自然和科学现象
+            "极光现象是太阳风带电粒子与地球磁场相互作用产生的发光现象。",
+            "珊瑚礁生态系统的共生关系维持着海洋生物多样性的平衡。",
+            "分形几何的自相似性在自然界的海岸线、云朵和血管网络中普遍存在。",
+            "潮汐锁定导致月球始终以同一面朝向地球的天文现象。",
+            "生物发光通过化学反应产生光线，常见于深海生物和萤火虫。"
+        ]
         hetero_data["node"].x = torch.randn(num_nodes, self.node_feature_dim)
-        hetero_data["node"].description = [f"node {i}" for i in range(num_nodes)]
+        hetero_data["node"].description = [diverse_texts[i] for i in range(num_nodes)]
         if edge_index and len(edge_index) == 2 and len(edge_index[0]) > 0:
             # 节点 ID 映射: 原始节点 ID -> 连续索引
             node_to_idx = {node: idx for idx, node in enumerate(node_list)}
@@ -284,6 +349,54 @@ class QwenGraphInstructDataPreparer:
             traceback.print_exc()
             return None
 
+    def simple_torch_ascii_plot(self, points, width=60, height=20):
+        """
+        最简单的torch高维点ASCII可视化
+        """
+        # 转换和降维
+        if torch.is_tensor(points):
+            points_np = points.numpy()
+        else:
+            points_np = np.array(points)
+
+        # 使用PCA降维
+        from sklearn.decomposition import PCA
+        pca = PCA(n_components=2)
+        points_2d = pca.fit_transform(points_np)
+
+        x, y = points_2d[:, 0], points_2d[:, 1]
+        n_points = len(x)
+
+        # 创建画布
+        canvas = [['·' for _ in range(width)] for _ in range(height)]
+
+        # 归一化
+        x_min, x_max = x.min(), x.max()
+        y_min, y_max = y.min(), y.max()
+
+        x_norm = (x - x_min) / (x_max - x_min) * 0.9 * width + 0.05 * width
+        y_norm = (y - y_min) / (y_max - y_min) * 0.9 * height + 0.05 * height
+
+        # 放置点
+        chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for i in range(n_points):
+            xi, yi = int(x_norm[i]), int(y_norm[i])
+            char = chars[i % len(chars)]
+            if 0 <= xi < width and 0 <= yi < height:
+                canvas[height - 1 - yi][xi] = char
+
+        # 生成输出
+        output = [f"Torch Points ({n_points} points)"]
+        output.append(f"X range: [{x_min:.2f}, {x_max:.2f}]  Y range: [{y_min:.2f}, {y_max:.2f}]")
+        output.append("=" * width)
+
+        for row in canvas:
+            output.append("".join(row))
+
+        output.append("=" * width)
+        output.append("Legend: " + " ".join([f"{chars[i]}:{i}" for i in range(min(n_points, 10))]))
+
+        return "\n".join(output)
     def process_sample(self, sample: Dict) -> Optional[Dict]:
         """处理单个样本"""
         sample_id = sample.get('id', 'unknown')
@@ -340,7 +453,12 @@ class QwenGraphInstructDataPreparer:
 
         # 创建图数据
         graph_data = self._create_hetero_data(graph_info)
+
         graph_data_a = self.metahgt_encoding(graph_data)
+        edge_index = graph_info.get('edge_index', [[], []])
+        ascii_art = self.simple_torch_ascii_plot(graph_data_a.x_dict['node'])
+        print(edge_index)
+        print(ascii_art)
         # 构建返回字典
         result = {
             'id': sample_id,

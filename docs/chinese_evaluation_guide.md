@@ -266,6 +266,75 @@ GraphInstruct/
 
 ---
 
+## LoRA模型评测
+
+### 概述
+
+GraphInstruct 支持评测基于 LoRA 微调的模型。LoRA 模型评测使用专门的脚本 `evaluate_text_only_lora.py`，该脚本支持自动检测 LoRA 适配器并加载。
+
+### 支持的模型
+
+| 模型路径 | 说明 |
+|----------|------|
+| `/mnt/yrfs/GraphInstruct/model/qwen3-4b-graph-reasoning-full` | GraphInstruct全量LoRA模型 |
+
+### 评测 LoRA 模型
+
+```bash
+cd /nvme0/work/workspaces-zy/GraphInstruct
+
+# 英文评测数据
+CUDA_VISIBLE_DEVICES=0 python script/evaluate_text_only_lora.py \
+    --model-path /mnt/yrfs/GraphInstruct/model/qwen3-4b-graph-reasoning-full \
+    --base-model-path /nvme0/work/workspaces-zy/model/Qwen3-4B-Instruct-2507/Qwen/Qwen3-4B-Instruct-2507 \
+    --eval-data-path data/eval/graphinstruct_eval_19tasks_10samples_text.json \
+    --output-dir data/eval/results_lora_en \
+    --max-new-tokens 1024 \
+    --bf16 \
+    --language en
+
+# 中文评测数据
+CUDA_VISIBLE_DEVICES=0 python script/evaluate_text_only_lora.py \
+    --model-path /mnt/yrfs/GraphInstruct/model/qwen3-4b-graph-reasoning-full \
+    --base-model-path /nvme0/work/workspaces-zy/model/Qwen3-4B-Instruct-2507/Qwen/Qwen3-4B-Instruct-2507 \
+    --eval-data-path data/eval/graphinstruct_zh_19tasks_10samples_text.json \
+    --output-dir data/eval/results_lora_zh \
+    --max-new-tokens 1024 \
+    --bf16 \
+    --language zh
+```
+
+### LoRA 评测参数
+
+| 参数 | 类型 | 必须 | 说明 |
+|------|------|------|------|
+| `--model-path` | str | 是 | LoRA适配器路径 |
+| `--base-model-path` | str | 是 | 基座模型路径 |
+| `--eval-data-path` | str | 是 | 评测数据JSON文件 |
+| `--output-dir` | str | 是 | 结果输出目录 |
+| `--max-new-tokens` | int | 否 | 最大生成token，默认1024 |
+| `--bf16` | flag | 否 | 使用bfloat16 |
+| `--verbose` | flag | 否 | 详细输出 |
+| `--language` | str | 否 | 语言: auto/en/zh |
+
+### 生成报告
+
+LoRA评测完成后，可使用报告生成脚本：
+
+```bash
+python script/generate_graphagent_report.py \
+    --results-dir data/eval/results_lora_en \
+    --max-new-tokens 1024 \
+    --language en
+
+python script/generate_graphagent_report.py \
+    --results-dir data/eval/results_lora_zh \
+    --max-new-tokens 1024 \
+    --language zh
+```
+
+---
+
 ## 常见问题
 
 ### Q1: 中文评测和英文评测的主要区别是什么？

@@ -87,8 +87,10 @@ TEMPLATES_EN = {
     # degree 任务模板
     'degree': {
         'question': 'What is the degree of node {}?',
+        'question_directed': 'What is the out-degree of node {}?',
         'steps_start': "Let's count the degree step by step.\n",
         'neighbors': 'Node {} is connected to nodes {}.\n',
+        'neighbors_directed': 'The successors of node {} are: {}, and there are {} successor nodes.\n',
         'count': 'The number of neighbors is {}.\n',
         'result': 'The degree of node {} is ',
     },
@@ -259,9 +261,11 @@ TEMPLATES_ZH = {
     'topological_sort': {
         'question': '输出该图的拓扑排序。拓扑排序是顶点的线性排序，使得对于每条有向边 (u, v)，顶点 u 在排序中位于 v 之前。',
         'steps_start': '让我们逐步解决这个问题。\n',
+        'zero_in_degree': '入度为0的节点: {}。\n',
+        'visit_node': '访问节点 {} 并将其从图中移除。\n',
         'in_degree': '节点 {} 的入度: {}。\n',
         'add_to_result': '将节点 {} 添加到结果中。\n',
-        'result': '拓扑排序是 ',
+        'result': '因此拓扑排序的结果是 ',
     },
 
     # cycle 任务模板
@@ -279,10 +283,12 @@ TEMPLATES_ZH = {
     # degree 任务模板
     'degree': {
         'question': '节点 {} 的度是多少？',
+        'question_directed': '节点 {} 的出度是多少？',
         'steps_start': '让我们逐步计算度。\n',
-        'neighbors': '节点 {} 连接到节点 {}。\n',
+        'neighbors': '节点 {} 的邻居是 {}，共有 {} 个邻居节点。\n',
+        'neighbors_directed': '节点 {} 的后继节点是 {}，共有 {} 个后继节点。\n',
         'count': '邻居数量是 {}。\n',
-        'result': '节点 {} 的度是 ',
+        'result': '因此节点 {} 的度是 ',
     },
 
     # connectivity 任务模板
@@ -314,12 +320,9 @@ TEMPLATES_ZH = {
 
     # bipartite 任务模板
     'bipartite': {
-        'question': '该图是否是二分图？',
-        'steps_start': '让我们逐步检查该图是否是二分图。\n',
-        'yes': '是',
-        'no': '否',
-        'result_yes': '是的，该图是二分图。',
-        'result_no': '不，该图不是二分图。',
+        'question': '找出该二分图中的最大匹配。',
+        'steps_start': '让我们使用匈牙利算法来找出最大匹配。\n',
+        'result': '最大匹配是 ',
     },
 
     # clustering_coefficient 任务模板
@@ -379,7 +382,7 @@ TEMPLATES_ZH = {
 
     # predecessor 任务模板
     'predecessor': {
-        'question': '在从节点 {} 出发的最短路径中，节点 {} 的前驱是什么？',
+        'question': '节点 {} 的前驱节点有哪些？前驱是指存在有向边从该节点指向目标节点的节点。',
         'steps_start': '让我们逐步找出前驱。\n',
         'result': '节点 {} 的前驱是 ',
     },

@@ -58,9 +58,38 @@ def question_generation_multilang(config, g, lang=LANG_EN):
 
 def answer_and_inference_steps_generation_multilang(config, g, ques, lang=LANG_EN):
     """生成topological_sort推理步骤和答案 (支持多语言)"""
-    # 原始函数返回3个值，没有reject
-    steps_str, ans, ans_str = answer_and_inference_steps_generation(config, g, ques)
+    from collections import deque
+    templates = get_task_templates(TASK_NAME, lang)
+
+    steps_str = templates['steps_start']
+
+    # 计算入度
+    in_degree = {node: 0 for node in g}
+    for node in g:
+        for neighbor in g.neighbors(node):
+            in_degree[neighbor] += 1
+
+    # 使用队列执行拓扑排序
+    queue = deque([node for node in g if in_degree[node] == 0])
+    result = []
+
+    while len(queue):
+        steps_str += templates['zero_in_degree'].format(NID(list(queue)))
+        node = queue.popleft()
+        result.append(node)
+        steps_str += templates['visit_node'].format(NID(node))
+
+        for neighbor in g.neighbors(node):
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+
+    steps_str += templates['result']
+
+    ans = result
+    ans_str = NID(ans)
     reject = False
+
     return steps_str, ans, ans_str, reject
 
 

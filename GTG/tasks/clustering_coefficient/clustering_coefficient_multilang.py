@@ -15,6 +15,61 @@ from GTG.utils.language import get_task_templates, graph_to_natural_language_mul
 TASK_NAME = 'clustering_coefficient'
 
 
+def question_generation_multilang(config, g, lang=LANG_EN):
+    """生成clustering_coefficient问题 (支持多语言)"""
+    import random
+    templates = get_task_templates(TASK_NAME, lang)
+
+    num_nodes = g.number_of_nodes()
+    node = random.randint(0, num_nodes - 1)
+
+    ques = {'u': node}
+    ques_str = templates['question'].format(NID(node))
+
+    return ques, ques_str
+
+
+def answer_and_inference_steps_generation_multilang(config, g, ques, directed, lang=LANG_EN):
+    """生成clustering_coefficient推理步骤和答案 (支持多语言)"""
+    templates = get_task_templates(TASK_NAME, lang)
+    steps_str = templates['steps_start']
+
+    u = ques['u']
+    nei = list(g.neighbors(u))
+    deg = len(nei)
+
+    if deg <= 1:
+        reject = True
+        return None, None, None, reject
+
+    edge_list = []
+    nu = 0
+    if g.is_directed():
+        for i in nei:
+            for j in nei:
+                if g.has_edge(i, j):
+                    nu += 1
+                    edge_list.append((i, j))
+        cc = nu / (deg * (deg - 1))
+    else:
+        for idx, i in enumerate(nei):
+            for j in nei[idx + 1:]:
+                if g.has_edge(i, j):
+                    nu += 1
+                    edge_list.append((i, j))
+        cc = 2 * nu / (deg * (deg - 1))
+
+    ans = cc
+    ans_str = "{:.4f}".format(ans)
+    steps_str += templates['result'].format(NID(ques['u']))
+
+    reject = False
+    if ans < 0.00001:
+        reject = True
+
+    return steps_str, ans, ans_str, reject
+
+
 def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_str=None, label_str=None, lang=LANG_EN):
     """创建样本 (使用多语言图描述)"""
     from GTG.utils.utils import NID, graph_to_edge_list_str, graph_to_adj_str
@@ -46,14 +101,13 @@ def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_
 def generate_a_sample_multilang(config, lang=LANG_EN):
     """生成clustering_coefficient样本 (支持多语言)"""
     g = graph_generation(config)
-    ques, ques_str = question_generation(config, g)
-    # 原始函数需要额外的directed参数
-    steps_str, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques, g.is_directed())
+    ques, ques_str = question_generation_multilang(config, g, lang)
+    steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, g.is_directed(), lang)
 
     while reject:
         g = graph_generation(config)
-        ques, ques_str = question_generation(config, g)
-        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques, g.is_directed())
+        ques, ques_str = question_generation_multilang(config, g, lang)
+        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, g.is_directed(), lang)
 
     choi_str, label_str = choices_generation(config, g, ques, ans)
 

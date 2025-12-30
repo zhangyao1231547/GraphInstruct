@@ -1,0 +1,82 @@
+{
+  "total": 190,
+  "success": 190,
+  "by_task": {
+    "BFS": {
+      "total": 10,
+      "success": 10
+    },
+    "DFS": {
+      "total": 10,
+      "success": 10
+    },
+    "shortest_path": {
+      "total": 10,
+      "success": 10
+    },
+    "page_rank": {
+      "total": 10,
+      "success": 10
+    },
+    "topological_sort": {
+      "total": 10,
+      "success": 10
+    },
+    "cycle": {
+      "total": 10,
+      "success": 10
+    },
+    "degree": {
+      "total": 10,
+      "success": 10
+    },
+    "connectivity": {
+      "total": 10,
+      "success": 10
+    },
+    "edge": {
+      "total": 10,
+      "success": 10
+    },
+    "neighbor": {
+      "total": 10,
+      "success": 10
+    },
+    "bipartite": {
+      "total": 10,
+      "success": 10
+    },
+    "clustering_coefficient": {
+      "total": 10,
+      "success": 10
+    },
+    "common_neighbor": {
+      "total": 10,
+      "success": 10
+    },
+    "connected_component": {
+      "total": 10,
+      "success": 10
+    },
+    "diameter": {
+      "total": 10,
+      "success": 10
+    },
+    "jaccard": {
+      "total": 10,
+      "success": 10
+    },
+    "maximum_flow": {
+      "total": 10,
+      "success": 10
+    },
+    "MST": {
+      "total": 10,
+      "success": 10
+    },
+    "predecessor": {
+      "total": 10,
+      "success": 10
+    }
+  }
+}

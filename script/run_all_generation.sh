@@ -1,5 +1,5 @@
 # modify this path:
-project_root=/Users/songxiran/code/GraphLLM_code_and_data/GraphLLM/GTG
+project_root=/home/test/workspaces-zy/GraphInstruct
 
 script_root=$project_root/script/dataset_generation
 
@@ -34,7 +34,6 @@ bash $script_root/euler_path.sh $data_root $num_nodes_range $num_sample $dataset
 bash $script_root/hamiltonian_path.sh $data_root $num_nodes_range $num_sample $dataset_tag
 bash $script_root/maximum_flow.sh $data_root $num_nodes_range $num_sample $dataset_tag
 bash $script_root/connected_component.sh $data_root $num_nodes_range $num_sample $dataset_tag
-
 
 ################################
 dataset_tag=small

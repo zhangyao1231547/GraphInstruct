@@ -37,11 +37,11 @@ GRAPH_EVAL_DATA="$EVAL_DATA_DIR/graphinstruct_zh_19tasks_${SAMPLES_PER_TASK}samp
 TEXT_EVAL_DATA="$EVAL_DATA_DIR/graphinstruct_zh_19tasks_${SAMPLES_PER_TASK}samples_text.json"
 
 # 输出目录
-GRAPH_OUTPUT_DIR="$EVAL_DATA_DIR/results_zh_graph_1024tokens"
+GRAPH_OUTPUT_DIR="$EVAL_DATA_DIR/results_zh_graph_8192tokens"
 TEXT_OUTPUT_DIR="$EVAL_DATA_DIR/results_zh_text_only"
 
 # 评测参数
-MAX_NEW_TOKENS=1024
+MAX_NEW_TOKENS=8192
 GPU_ID=0
 
 # ============================================================

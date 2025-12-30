@@ -17,6 +17,22 @@ import numpy as np
 TASK_NAME = 'maximum_flow'
 
 
+def question_generation_multilang(config, start_node, end_node, lang=LANG_EN):
+    """生成maximum_flow问题 (支持多语言)"""
+    templates = get_task_templates(TASK_NAME, lang)
+    ques_str = templates['question'].format(NID(start_node), NID(end_node))
+    return ques_str
+
+
+def answer_and_inference_steps_generation_multilang(config, g, start_node, end_node, lang=LANG_EN):
+    """生成maximum_flow推理步骤和答案 (支持多语言)"""
+    templates = get_task_templates(TASK_NAME, lang)
+    steps_str, ans, ans_str = answer_and_inference_steps_generation(config, g, start_node, end_node)
+    # 替换步骤开头
+    steps_str = templates['steps_start'] + templates['result']
+    return steps_str, ans, ans_str
+
+
 def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_str=None, label_str=None, lang=LANG_EN, **kwargs):
     """创建样本 (使用多语言图描述)"""
     from GTG.utils.utils import NID, graph_to_edge_list_str, graph_to_adj_str
@@ -47,17 +63,14 @@ def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_
 def generate_a_sample_multilang(config, lang=LANG_EN):
     """生成maximum_flow样本 (支持多语言)"""
     g, start_node, end_node = generate_maximum_flow_graph(config)
-    # 原始question_generation需要start_node和end_node
-    ques_str = question_generation(config, start_node, end_node)
-    # 原始answer_and_inference_steps_generation返回3个值
-    steps_str, ans, ans_str = answer_and_inference_steps_generation(config, g, start_node, end_node)
+    ques_str = question_generation_multilang(config, start_node, end_node, lang)
+    steps_str, ans, ans_str = answer_and_inference_steps_generation_multilang(config, g, start_node, end_node, lang)
 
     while ans == 0:
         g, start_node, end_node = generate_maximum_flow_graph(config)
-        ques_str = question_generation(config, start_node, end_node)
-        steps_str, ans, ans_str = answer_and_inference_steps_generation(config, g, start_node, end_node)
+        ques_str = question_generation_multilang(config, start_node, end_node, lang)
+        steps_str, ans, ans_str = answer_and_inference_steps_generation_multilang(config, g, start_node, end_node, lang)
 
-    # 原始choices_generation没有g和ques参数
     choi_str, label_str = choices_generation(config, ans)
 
     sample = make_sample_multilang(

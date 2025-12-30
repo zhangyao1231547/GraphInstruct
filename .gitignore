@@ -17,3 +17,9 @@ data/converted/merged_graphinstruct.json
 data/training/
 data/test
 data/eval/
+data/converted
+data/converted_backup
+data/converted_english
+data/converted_fixed
+data/chinese_training
+*.pth

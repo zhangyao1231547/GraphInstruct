@@ -1,0 +1,90 @@
+============================================
+GraphAgent Stage4 Epoch4 Model Evaluation
+============================================
+Base Model: /nvme0/work/workspaces-zy/model/Qwen3-4B-Instruct-2507/Qwen/Qwen3-4B-Instruct-2507
+Checkpoint: /mnt/yrfs/GraphAgent_model/liangjinming/model/graphagent-qwen3-instruct-mst-stp/stage4-epoch5-8192-graphinstruct/lightning_logs/version_0/model_epoch=4-step=67860.ckpt
+Eval Data: /nvme0/work/workspaces-zy/GraphInstruct/data/eval/graphinstruct_eval_19tasks_10samples_v3.pt
+Output Dir: /nvme0/work/workspaces-zy/GraphInstruct/data/eval/results_stage4_epoch4_20251230_092827
+GPUs: 0
+Batch Size: 1
+Model Max Length: 16384
+Max New Tokens: 8192
+Use GNN Encoder: True
+  GNN Type: gat
+  GNN Layers: 2
+  GNN Hidden: 256
+============================================
+/nvme0/work/workspaces-zy/GraphGPT-zy/miniconda3/envs/graphagent/lib/python3.11/site-packages/lightning/fabric/__init__.py:41: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+Seed set to 42
+============================================================
+GraphAgent GNN Model Evaluation
+============================================================
+Checkpoint: /mnt/yrfs/GraphAgent_model/liangjinming/model/graphagent-qwen3-instruct-mst-stp/stage4-epoch5-8192-graphinstruct/lightning_logs/version_0/model_epoch=4-step=67860.ckpt
+Eval Data: /nvme0/work/workspaces-zy/GraphInstruct/data/eval/graphinstruct_eval_19tasks_10samples_v3.pt
+Output Dir: /nvme0/work/workspaces-zy/GraphInstruct/data/eval/results_stage4_epoch4_20251230_092827
+GPUs: [0]
+GNN Encoder: True
+  GNN Type: gat
+  GNN Layers: 2
+  GNN Hidden: 256
+============================================================
+[Conversation] Using Qwen template
+Loading model...
+[Model Selection] Detected Qwen3 architecture (qwen3), using HeteroGraphQwen3ForCausalLM
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.16it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.15it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  3.18it/s]
+[GNN] Enabling GNN encoder with config: {'gnn_type': 'gat', 'gnn_num_layers': 2, 'gnn_hidden_channels': 256, 'gnn_num_heads': 4, 'gnn_dropout': 0.1}
+******** Initialized GNN Encoder for Qwen3 in initialize_graph_modules *********
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+Loading checkpoint from /mnt/yrfs/GraphAgent_model/liangjinming/model/graphagent-qwen3-instruct-mst-stp/stage4-epoch5-8192-graphinstruct/lightning_logs/version_0/model_epoch=4-step=67860.ckpt...
+Loaded checkpoint. Missing keys: 1, Unexpected keys: 1
+/nvme0/work/workspaces-zy/GraphGPT-zy/miniconda3/envs/graphagent/lib/python3.11/site-packages/lightning/fabric/connector.py:563: `precision=bf16` is supported for historical reasons but its usage is discouraged. Please set your precision to bf16-mixed instead!
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+
+Starting GNN model evaluation...
+You are using a CUDA device ('NVIDIA A800-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+WARNING:root:Loading data...
+WARNING:root:Removed 0 samples with input_ids >= 8192
+WARNING:root:Removed 0 samples with labels all -100
+Loaded 190 evaluation samples
+[Data Debug] First sample:
+  input_ids: shape=torch.Size([667]), min=8, max=151671
+  labels: shape=torch.Size([667]), min=-100, max=151645
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7]
+/nvme0/work/workspaces-zy/GraphGPT-zy/miniconda3/envs/graphagent/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:441: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=127` in the `DataLoader` to improve performance.
+Predicting: |          | 0/? [00:00<?, ?it/s]Predicting:   0%|          | 0/190 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/190 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+
+============================================================
+Sample 9827 (Task: BFS)
+============================================================
+Graph info: {'is_hetero': True, 'is_homo': False, 'node_types': ['node'], 'node_counts': {'node': 15}, 'has_edge_index': True, 'edge_count': 39}
+Ground Truth Answer: [14, 9, 6, 12, 8, 11, 2, 0, 4, 10, 1, 7, 5, 3]
+Predicted Answer: [9, 6, 8, 11, 1, 10, 0, 5, 2, 3, 12, 4, 13, 7]
+Correct: False
+============================================================
+
+Predicting DataLoader 0:   1%|          | 1/190 [00:08<26:37,  0.12it/s]
+============================================================
+Sample 9557 (Task: BFS)
+============================================================
+Graph info: {'is_hetero': True, 'is_homo': False, 'node_types': ['node'], 'node_counts': {'node': 9}, 'has_edge_index': True, 'edge_count': 32}
+Ground Truth Answer: [1, 4, 8, 5, 7, 0, 6, 3, 2]
+Predicted Answer: [0, 2, 3, 4, 5, 6, 7, 8, 1]
+Correct: False
+============================================================
+
+Predicting DataLoader 0:   1%|          | 2/190 [00:10<16:15,  0.19it/s]
+============================================================
+Sample 9512 (Task: BFS)
+============================================================
+Graph info: {'is_hetero': True, 'is_homo': False, 'node_types': ['node'], 'node_counts': {'node': 14}, 'has_edge_index': True, 'edge_count': 72}
+Ground Truth Answer: [0, 1, 3, 2, 6, 13, 9, 12, 11, 10, 7, 8, 4, 5]
+Predicted Answer: NULL
+Correct: False
+============================================================
+
+Predicting DataLoader 0:   2%|▏         | 3/190 [04:02<4:11:42,  0.01it/s]Predicting DataLoader 0:   2%|▏         | 4/190 [04:08<3:12:12,  0.02it/s]Predicting DataLoader 0:   3%|▎         | 5/190 [04:09<2:33:50,  0.02it/s]Predicting DataLoader 0:   3%|▎         | 6/190 [04:10<2:08:15,  0.02it/s]Predicting DataLoader 0:   4%|▎         | 7/190 [08:02<3:30:22,  0.01it/s]Predicting DataLoader 0:   4%|▍         | 8/190 [08:07<3:04:56,  0.02it/s]Predicting DataLoader 0:   5%|▍         | 9/190 [08:13<2:45:21,  0.02it/s]Predicting DataLoader 0:   5%|▌         | 10/190 [08:17<2:29:12,  0.02it/s]Predicting DataLoader 0:   6%|▌         | 11/190 [08:28<2:18:01,  0.02it/s][rank: 0] Received SIGTERM: 15
+script/run_eval_stage4_epoch4.sh: line 164: 1991101 Killed                  python -u evaluate_gnn_model.py --version qwen --model_name_or_path ${base_model} --checkpoint_path ${checkpoint_path} --eval_data_path ${eval_data} --output_dir ${output_dir} --batch_size ${batch_size} --max_new_tokens ${max_new_tokens} --bf16 True --model_max_length ${model_max_length} --use_graph_start_end True --gpus ${gpus} --verbose ${verbose} --use_gnn_encoder ${use_gnn_encoder} --gnn_type ${gnn_type} --gnn_num_layers ${gnn_num_layers} --gnn_hidden_channels ${gnn_hidden_channels} --gnn_num_heads ${gnn_num_heads} --gnn_dropout ${gnn_dropout}

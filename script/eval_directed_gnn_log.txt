@@ -1,0 +1,11 @@
+Seed set to 42
+Traceback (most recent call last):
+  File "/nvme0/work/workspaces-zy/GraphInstruct/script/evaluate_gnn_model.py", line 928, in <module>
+    evaluate()
+    ~~~~~~~~^^
+  File "/nvme0/work/workspaces-zy/GraphInstruct/script/evaluate_gnn_model.py", line 778, in evaluate
+    model_args, data_args, eval_args = parser.parse_args_into_dataclasses()
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/nvme0/work/workspaces-zy/GraphGPT-zy/miniconda3/lib/python3.13/site-packages/transformers/hf_argparser.py", line 367, in parse_args_into_dataclasses
+    raise ValueError(f"Some specified arguments are not used by the HfArgumentParser: {remaining_args}")
+ValueError: Some specified arguments are not used by the HfArgumentParser: ['', '', '', '', '', '']

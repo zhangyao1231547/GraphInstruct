@@ -201,8 +201,8 @@ class TaskConverter:
             'en_prompt': 'Given the following graph structure:\n<graph>\n\nCalculate the maximum flow from source node {source} to sink node {sink}.'
         },
         'PAGE_RANK': {
-            'zh_prompt': '给定以下图结构:\n<graph>\n\n请计算节点 {node} 的PageRank值。',
-            'en_prompt': 'Given the following graph structure:\n<graph>\n\nCalculate the PageRank value of node {node}.'
+            'zh_prompt': '给定以下图结构:\n<graph>\n\n请计算哪个节点的PageRank值最大。(阻尼系数=0.85，迭代次数=3)',
+            'en_prompt': 'Given the following graph structure:\n<graph>\n\nWhich node has the largest PageRank value? (damping factor=0.85, iterations=3)'
         },
         'TOPOLOGICAL_SORT': {
             'zh_prompt': '给定以下有向无环图结构:\n<graph>\n\n请输出一个有效的拓扑排序序列。',
@@ -261,11 +261,34 @@ class TaskConverter:
                 params['source'] = int(match.group(1))
                 params['target'] = int(match.group(2))
 
-        elif task_type in ['DEGREE', 'NEIGHBOR', 'PAGE_RANK', 'CLUSTERING_COEFFICIENT', 'PREDECESSOR']:
-            # "of node X" or "node X?"
-            match = re.search(r'(?:of\s+)?node\s+(\d+)\??', instruction, re.IGNORECASE)
+        elif task_type == 'DEGREE':
+            # "degree of node X" or "What is the degree of node X?"
+            match = re.search(r'degree of node\s+(\d+)', instruction, re.IGNORECASE)
             if match:
                 params['node'] = int(match.group(1))
+
+        elif task_type == 'NEIGHBOR':
+            # "neighbor nodes of node X" or "Which are the neighbor nodes of node X?"
+            match = re.search(r'neighbor nodes of node\s+(\d+)', instruction, re.IGNORECASE)
+            if match:
+                params['node'] = int(match.group(1))
+
+        elif task_type == 'PREDECESSOR':
+            # "predecessor nodes of node X" or "Which are the predecessor nodes of node X?"
+            match = re.search(r'predecessor nodes of node\s+(\d+)', instruction, re.IGNORECASE)
+            if match:
+                params['node'] = int(match.group(1))
+
+        elif task_type == 'CLUSTERING_COEFFICIENT':
+            # "clustering coefficient of node X" or "What is the clustering coefficient of node X?"
+            match = re.search(r'clustering coefficient of node\s+(\d+)', instruction, re.IGNORECASE)
+            if match:
+                params['node'] = int(match.group(1))
+
+        elif task_type == 'PAGE_RANK':
+            # PAGE_RANK asks "Which node has the largest PageRank value?" - no specific node
+            # The template doesn't require a node parameter
+            pass
 
         elif task_type == 'CONNECTIVITY':
             # "node X and node Y are connected"

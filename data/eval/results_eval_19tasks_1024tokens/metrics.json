@@ -1,142 +1,91 @@
 {
+  "model": "Unknown",
+  "is_lora": false,
   "total": 190,
-  "exact_match": 0,
-  "partial_match": 0,
-  "by_task_type": {
+  "correct": 42,
+  "accuracy": 0.22105263157894736,
+  "by_task": {
     "BFS": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 0
     },
     "DFS": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 0
     },
     "bipartite": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 0
     },
     "clustering_coefficient": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 1
     },
     "common_neighbor": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 1
     },
     "connected_component": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 1
     },
     "connectivity": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 2
     },
     "cycle": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 6
     },
     "degree": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 9
     },
     "diameter": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 2
     },
     "edge": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 9
     },
     "jaccard": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 2
     },
     "maximum_flow": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 0
     },
     "MST": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 1
     },
     "neighbor": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 6
     },
     "page_rank": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 0
     },
     "predecessor": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 1
     },
     "shortest_path": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 1
     },
     "topological_sort": {
       "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
+      "correct": 0
     }
   },
-  "exact_match_rate": 0.0,
-  "partial_match_rate": 0.0
+  "evaluation_time": "",
+  "recalculated_time": "2025-12-18 17:42:46",
+  "original_correct": 42,
+  "original_accuracy": 0.22105263157894736,
+  "accuracy_change": 0.0,
+  "correct_change": 0
 }

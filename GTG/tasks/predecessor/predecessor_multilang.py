@@ -16,6 +16,40 @@ import numpy as np
 TASK_NAME = 'predecessor'
 
 
+def question_generation_multilang(config, g, lang=LANG_EN):
+    """生成predecessor问题 (支持多语言)"""
+    import random
+    templates = get_task_templates(TASK_NAME, lang)
+
+    num_nodes = g.number_of_nodes()
+    u = random.randint(0, num_nodes - 1)
+
+    ques = {'u': u}
+    ques_str = templates['question'].format(NID(u))
+
+    return ques, ques_str
+
+
+def answer_and_inference_steps_generation_multilang(config, g, ques, lang=LANG_EN):
+    """生成predecessor推理步骤和答案 (支持多语言)"""
+    templates = get_task_templates(TASK_NAME, lang)
+    steps_str = templates['steps_start']
+
+    u = ques['u']
+    u_nei = np.array(list(g.predecessors(u)))
+
+    steps_str += templates['result'].format(NID(ques['u']))
+
+    ans = u_nei
+    ans_str = NID(u_nei)
+
+    reject = False
+    if len(ans) == 0 or len(ans) >= g.number_of_nodes() - 1:
+        reject = True
+
+    return steps_str, ans, ans_str, reject
+
+
 def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_str=None, label_str=None, lang=LANG_EN):
     """创建样本 (使用多语言图描述)"""
     from GTG.utils.utils import NID, graph_to_edge_list_str, graph_to_adj_str
@@ -45,15 +79,14 @@ def make_sample_multilang(task_name, g, ques_str, ans_str, steps_str=None, choi_
 
 def generate_a_sample_multilang(config, lang=LANG_EN):
     """生成predecessor样本 (支持多语言)"""
-    # 必须使用有向图，因为predecessor需要调用g.predecessors()
     g = graph_generation(config, directed=True)
-    ques, ques_str = question_generation(config, g)
-    steps_str, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques)
+    ques, ques_str = question_generation_multilang(config, g, lang)
+    steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, lang)
 
     while reject:
         g = graph_generation(config, directed=True)
-        ques, ques_str = question_generation(config, g)
-        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation(config, g, ques)
+        ques, ques_str = question_generation_multilang(config, g, lang)
+        steps_str, ans, ans_str, reject = answer_and_inference_steps_generation_multilang(config, g, ques, lang)
 
     choi_str, label_str = choices_generation(config, g, ques, ans)
 

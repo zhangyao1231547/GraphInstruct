@@ -1,12 +1,9 @@
 {
   "model": "Qwen3-4B-Instruct (Original)",
+  "is_lora": false,
   "total": 190,
-  "correct": 36,
-  "accuracy": 0.18947368421052632,
-  "exact_match": 0,
-  "partial_match": 0,
-  "exact_match_rate": 0.0,
-  "partial_match_rate": 0.0,
+  "correct": 40,
+  "accuracy": 0.21052631578947367,
   "by_task": {
     "BFS": {
       "total": 10,
@@ -22,7 +19,7 @@
     },
     "clustering_coefficient": {
       "total": 10,
-      "correct": 1
+      "correct": 2
     },
     "common_neighbor": {
       "total": 10,
@@ -54,7 +51,7 @@
     },
     "jaccard": {
       "total": 10,
-      "correct": 1
+      "correct": 4
     },
     "maximum_flow": {
       "total": 10,
@@ -85,139 +82,10 @@
       "correct": 0
     }
   },
-  "by_task_type": {
-    "BFS": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "DFS": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "bipartite": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "clustering_coefficient": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "common_neighbor": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "connected_component": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "connectivity": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "cycle": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "degree": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "diameter": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "edge": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "jaccard": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "maximum_flow": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "MST": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "neighbor": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "page_rank": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "predecessor": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "shortest_path": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    },
-    "topological_sort": {
-      "total": 10,
-      "exact_match": 0,
-      "partial_match": 0,
-      "exact_match_rate": 0.0,
-      "partial_match_rate": 0.0
-    }
-  }
+  "evaluation_time": "",
+  "recalculated_time": "2025-12-18 17:42:46",
+  "original_correct": 36,
+  "original_accuracy": 0.18947368421052632,
+  "accuracy_change": 0.02105263157894735,
+  "correct_change": 4
 }

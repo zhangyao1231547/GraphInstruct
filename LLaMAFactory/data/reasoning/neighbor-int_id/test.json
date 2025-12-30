@@ -1,0 +1,602 @@
+[
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 9 is connected to node 1.\nNode 1 is connected to nodes 9, 4, 3.\nNode 4 is connected to nodes 1, 2.\nNode 3 is connected to nodes 1, 7, 5.\nNode 2 is connected to nodes 4, 8.\nNode 6 is connected to node 7.\nNode 7 is connected to nodes 6, 5, 3.\nNode 5 is connected to nodes 7, 3.\nNode 8 is connected to nodes 2, 0.\nNode 0 is connected to node 8.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [7, 3], so the neighbors of node 5 are  <<<[7, 3]>>>",
+    "id": 0
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 2, 4.\nNode 2 is connected to nodes 5, 6.\nNode 4 is connected to nodes 5, 3.\nNode 6 is connected to nodes 2, 1.\nNode 3 is connected to nodes 0, 4.\nNode 0 is connected to nodes 3, 1.\nNode 1 is connected to nodes 0, 6.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [5, 3], so the neighbors of node 4 are  <<<[5, 3]>>>",
+    "id": 1
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 4, 1, 2, 3, 8.\nNode 4 is connected to node 0.\nNode 1 is connected to node 0.\nNode 2 is connected to nodes 0, 6, 5, 7.\nNode 3 is connected to node 0.\nNode 8 is connected to node 0.\nNode 6 is connected to node 2.\nNode 5 is connected to node 2.\nNode 7 is connected to node 2.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [4, 1, 2, 3, 8], so the neighbors of node 0 are  <<<[4, 1, 2, 3, 8]>>>",
+    "id": 2
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 2 is connected to node 0.\nNode 0 is connected to nodes 4, 2.\nNode 3 is connected to nodes 1, 0, 2.\nNode 1 is connected to nodes 0, 2.\nNode 4 is connected to nodes 3, 0.\nWhich are the neighbor nodes of node 4? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [3, 0], so the neighbors of node 4 are  <<<[3, 0]>>>",
+    "id": 3
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 7, 6, 8.\nNode 7 is connected to nodes 1, 0, 6.\nNode 6 is connected to nodes 1, 7, 2, 9.\nNode 8 is connected to nodes 1, 0, 2.\nNode 0 is connected to nodes 7, 5, 3, 8, 2, 4.\nNode 5 is connected to nodes 0, 4.\nNode 4 is connected to nodes 5, 0, 9.\nNode 3 is connected to nodes 0, 2.\nNode 2 is connected to nodes 0, 6, 3, 8.\nNode 9 is connected to nodes 6, 4.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [5, 0, 9], so the neighbors of node 4 are  <<<[5, 0, 9]>>>",
+    "id": 4
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 3, 1, 0, 2.\nNode 3 is connected to node 4.\nNode 1 is connected to node 4.\nNode 0 is connected to node 4.\nNode 2 is connected to node 4.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [4], so the neighbors of node 3 are  <<<[4]>>>",
+    "id": 5
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 4 is connected to nodes 1, 3.\nNode 3 is connected to nodes 10, 9, 8.\nNode 6 is connected to nodes 8, 5.\nNode 8 is connected to nodes 9, 6.\nNode 5 is connected to nodes 6, 2.\nNode 2 is connected to nodes 10, 4.\nNode 10 is connected to nodes 6, 2.\nNode 9 is connected to node 10.\nNode 11 is connected to nodes 3, 7, 4, 8.\nNode 7 is connected to nodes 6, 2, 1, 3.\nNode 0 is connected to node 7.\nWhich are the neighbor nodes of node 0? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [7], so the neighbors of node 0 are  <<<[7]>>>",
+    "id": 6
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 6 is connected to nodes 0, 8, 3.\nNode 0 is connected to node 2.\nNode 8 is connected to nodes 4, 0, 1.\nNode 3 is connected to nodes 4, 6, 1.\nNode 5 is connected to node 4.\nNode 4 is connected to nodes 0, 3.\nNode 2 is connected to nodes 7, 8, 3, 4.\nNode 7 is connected to nodes 3, 5, 0.\nNode 1 is connected to nodes 8, 2.\nWhich are the neighbor nodes of node 4? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [0, 3], so the neighbors of node 4 are  <<<[0, 3]>>>",
+    "id": 7
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 7, 6, 4.\nNode 7 is connected to nodes 2, 3.\nNode 6 is connected to nodes 2, 8.\nNode 4 is connected to nodes 2, 3.\nNode 3 is connected to nodes 7, 4.\nNode 0 is connected to node 1.\nNode 1 is connected to nodes 0, 5.\nNode 5 is connected to nodes 1, 8.\nNode 8 is connected to nodes 5, 6.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [0, 5], so the neighbors of node 1 are  <<<[0, 5]>>>",
+    "id": 8
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 5 is connected to nodes 1, 0, 2.\nNode 1 is connected to nodes 0, 9, 5, 10.\nNode 0 is connected to nodes 6, 8, 9, 7.\nNode 2 is connected to nodes 7, 3, 0, 6.\nNode 7 is connected to nodes 6, 9, 5.\nNode 6 is connected to nodes 8, 9, 5, 7, 3.\nNode 9 is connected to nodes 5, 1, 6.\nNode 3 is connected to nodes 6, 4, 9, 2.\nNode 4 is connected to nodes 5, 1, 0, 6.\nNode 10 is connected to nodes 4, 2.\nNode 8 is connected to nodes 2, 3.\nWhich are the neighbor nodes of node 8? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 8 connects to nodes [2, 3], so the neighbors of node 8 are  <<<[2, 3]>>>",
+    "id": 9
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to node 0.\nNode 0 is connected to nodes 3, 2.\nNode 2 is connected to nodes 0, 1, 5.\nNode 1 is connected to node 2.\nNode 5 is connected to nodes 2, 4.\nNode 4 is connected to node 5.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [2], so the neighbors of node 1 are  <<<[2]>>>",
+    "id": 10
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 6 is connected to nodes 0, 7.\nNode 0 is connected to nodes 5, 7, 4, 1, 3.\nNode 4 is connected to node 1.\nNode 1 is connected to nodes 3, 6.\nNode 2 is connected to nodes 1, 7.\nNode 3 is connected to nodes 6, 4.\nNode 5 is connected to nodes 7, 4, 2, 1.\nWhich are the neighbor nodes of node 4? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [1], so the neighbors of node 4 are  <<<[1]>>>",
+    "id": 11
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 6 is connected to nodes 9, 8, 1, 5, 3, 2, 4, 0, 10.\nNode 9 is connected to nodes 6, 8, 5, 3, 7, 4, 0, 10.\nNode 8 is connected to nodes 6, 9, 3, 7, 0.\nNode 1 is connected to nodes 6, 5, 3, 2, 7, 4, 0, 10.\nNode 5 is connected to nodes 6, 9, 1, 3, 2, 7, 0, 10.\nNode 3 is connected to nodes 6, 9, 8, 1, 5, 7, 0, 10.\nNode 2 is connected to nodes 6, 1, 5, 4, 0.\nNode 4 is connected to nodes 6, 9, 1, 2, 7, 0, 10.\nNode 0 is connected to nodes 6, 9, 8, 1, 5, 3, 2, 7, 4.\nNode 10 is connected to nodes 6, 9, 1, 5, 3, 7, 4.\nNode 7 is connected to nodes 9, 8, 1, 5, 3, 4, 0, 10.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [6, 9, 8, 1, 5, 7, 0, 10], so the neighbors of node 3 are  <<<[6, 9, 8, 1, 5, 7, 0, 10]>>>",
+    "id": 12
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 2, 6, 0.\nNode 2 is connected to nodes 5, 8, 4, 0, 1, 3.\nNode 6 is connected to nodes 5, 8, 10, 4, 7, 9, 1, 3.\nNode 0 is connected to nodes 5, 2, 8, 10, 4, 7, 9, 1, 3.\nNode 8 is connected to nodes 2, 10, 4, 7, 6, 9, 0, 3.\nNode 4 is connected to nodes 2, 8, 6, 9, 0, 1.\nNode 1 is connected to nodes 2, 10, 4, 7, 6, 9, 0, 3.\nNode 3 is connected to nodes 2, 8, 10, 6, 0, 1.\nNode 10 is connected to nodes 8, 7, 6, 9, 0, 1, 3.\nNode 7 is connected to nodes 8, 10, 6, 9, 0, 1.\nNode 9 is connected to nodes 8, 10, 4, 7, 6, 0, 1.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [5, 2, 8, 10, 4, 7, 9, 1, 3], so the neighbors of node 0 are  <<<[5, 2, 8, 10, 4, 7, 9, 1, 3]>>>",
+    "id": 13
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 0, 2.\nNode 0 is connected to nodes 1, 6.\nNode 2 is connected to nodes 1, 5, 6.\nNode 6 is connected to nodes 0, 2, 4.\nNode 5 is connected to node 2.\nNode 3 is connected to node 4.\nNode 4 is connected to nodes 3, 6.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [0, 2], so the neighbors of node 1 are  <<<[0, 2]>>>",
+    "id": 14
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 0, 4, 2.\nNode 0 is connected to nodes 1, 4.\nNode 4 is connected to nodes 1, 0.\nNode 2 is connected to nodes 1, 3.\nNode 3 is connected to nodes 5, 2.\nNode 5 is connected to node 3.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [3], so the neighbors of node 5 are  <<<[3]>>>",
+    "id": 15
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 8, 10, 7.\nNode 8 is connected to nodes 5, 7.\nNode 10 is connected to nodes 5, 9.\nNode 7 is connected to nodes 5, 8.\nNode 6 is connected to node 0.\nNode 0 is connected to nodes 6, 2, 1.\nNode 2 is connected to node 0.\nNode 1 is connected to nodes 0, 9, 4.\nNode 9 is connected to nodes 10, 1.\nNode 4 is connected to nodes 1, 3.\nNode 3 is connected to node 4.\nWhich are the neighbor nodes of node 8? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 8 connects to nodes [5, 7], so the neighbors of node 8 are  <<<[5, 7]>>>",
+    "id": 16
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 7 is connected to nodes 4, 5.\nNode 4 is connected to nodes 2, 1, 7.\nNode 5 is connected to nodes 2, 1, 4, 0, 6.\nNode 2 is connected to node 7.\nNode 1 is connected to nodes 4, 0, 2.\nNode 0 is connected to nodes 6, 5, 1, 7, 4.\nNode 3 is connected to nodes 5, 4.\nNode 8 is connected to node 7.\nWhich are the neighbor nodes of node 5? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [2, 1, 4, 0, 6], so the neighbors of node 5 are  <<<[2, 1, 4, 0, 6]>>>",
+    "id": 17
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 1, 0.\nNode 1 is connected to nodes 3, 4, 5.\nNode 0 is connected to node 3.\nNode 4 is connected to nodes 1, 5, 2.\nNode 5 is connected to nodes 1, 4.\nNode 2 is connected to node 4.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [1, 5, 2], so the neighbors of node 4 are  <<<[1, 5, 2]>>>",
+    "id": 18
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 1, 2.\nNode 1 is connected to nodes 0, 4.\nNode 2 is connected to nodes 0, 5.\nNode 4 is connected to nodes 1, 8.\nNode 5 is connected to nodes 2, 3.\nNode 7 is connected to nodes 6, 3.\nNode 6 is connected to nodes 7, 8.\nNode 3 is connected to nodes 7, 5.\nNode 8 is connected to nodes 6, 4.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [0, 4], so the neighbors of node 1 are  <<<[0, 4]>>>",
+    "id": 19
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 8 is connected to nodes 2, 7, 5, 1, 3, 6, 4.\nNode 2 is connected to nodes 8, 7, 5, 6, 4.\nNode 7 is connected to nodes 8, 2, 0, 3, 4.\nNode 5 is connected to nodes 8, 2, 0, 1, 6, 4.\nNode 1 is connected to nodes 8, 0, 5, 6.\nNode 3 is connected to nodes 8, 7, 0, 6, 4.\nNode 6 is connected to nodes 8, 2, 5, 1, 3, 4.\nNode 4 is connected to nodes 8, 2, 7, 0, 5, 3, 6.\nNode 0 is connected to nodes 7, 5, 1, 3, 4.\nWhich are the neighbor nodes of node 7? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 7 connects to nodes [8, 2, 0, 3, 4], so the neighbors of node 7 are  <<<[8, 2, 0, 3, 4]>>>",
+    "id": 20
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 3 is connected to node 0.\nNode 0 is connected to nodes 1, 6.\nNode 4 is connected to node 3.\nNode 1 is connected to nodes 2, 4.\nNode 6 is connected to node 4.\nNode 5 is connected to nodes 2, 0, 1.\nWhich are the neighbor nodes of node 6? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 6 connects to nodes [4], so the neighbors of node 6 are  <<<[4]>>>",
+    "id": 21
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 1 is connected to nodes 4, 0.\nNode 4 is connected to node 7.\nNode 0 is connected to nodes 6, 3.\nNode 7 is connected to nodes 3, 4.\nNode 2 is connected to nodes 7, 3, 1.\nNode 3 is connected to nodes 5, 2.\nNode 6 is connected to nodes 3, 1, 2.\nNode 5 is connected to nodes 4, 2, 6.\nWhich are the neighbor nodes of node 2? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [7, 3, 1], so the neighbors of node 2 are  <<<[7, 3, 1]>>>",
+    "id": 22
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to node 0.\nNode 0 is connected to nodes 5, 6.\nNode 6 is connected to nodes 0, 4, 3.\nNode 4 is connected to nodes 6, 2.\nNode 3 is connected to nodes 6, 1, 2.\nNode 1 is connected to node 3.\nNode 2 is connected to nodes 3, 4.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [0], so the neighbors of node 5 are  <<<[0]>>>",
+    "id": 23
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 9 is connected to nodes 4, 8.\nNode 4 is connected to nodes 8, 9, 5.\nNode 8 is connected to nodes 2, 5, 3, 4.\nNode 10 is connected to nodes 2, 8.\nNode 2 is connected to nodes 5, 7.\nNode 5 is connected to nodes 0, 8, 6.\nNode 7 is connected to nodes 2, 3, 8.\nNode 1 is connected to nodes 4, 2.\nNode 6 is connected to nodes 4, 0.\nNode 0 is connected to node 10.\nNode 3 is connected to nodes 4, 8, 10, 5.\nWhich are the neighbor nodes of node 4? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [8, 9, 5], so the neighbors of node 4 are  <<<[8, 9, 5]>>>",
+    "id": 24
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 7 is connected to nodes 8, 5, 3, 9, 0.\nNode 8 is connected to nodes 7, 6, 0, 1, 2.\nNode 5 is connected to nodes 7, 6, 2, 3, 0, 4, 1.\nNode 3 is connected to nodes 7, 5, 9.\nNode 9 is connected to nodes 7, 6, 3, 4, 1.\nNode 0 is connected to nodes 7, 8, 5.\nNode 6 is connected to nodes 8, 2, 5, 9.\nNode 1 is connected to nodes 8, 5, 9.\nNode 2 is connected to nodes 8, 6, 5, 4.\nNode 4 is connected to nodes 2, 5, 9.\nWhich are the neighbor nodes of node 7? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 7 connects to nodes [8, 5, 3, 9, 0], so the neighbors of node 7 are  <<<[8, 5, 3, 9, 0]>>>",
+    "id": 25
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 0, 5.\nNode 0 is connected to nodes 4, 1.\nNode 5 is connected to nodes 4, 2, 1.\nNode 1 is connected to nodes 0, 5, 3.\nNode 2 is connected to node 5.\nNode 3 is connected to node 1.\nWhich are the neighbor nodes of node 2? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [5], so the neighbors of node 2 are  <<<[5]>>>",
+    "id": 26
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 4, 2, 1, 5.\nNode 4 is connected to nodes 0, 6.\nNode 2 is connected to nodes 0, 1.\nNode 1 is connected to nodes 0, 3, 6, 2, 5.\nNode 5 is connected to nodes 0, 1.\nNode 6 is connected to nodes 4, 1, 3.\nNode 3 is connected to nodes 1, 6.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [0, 6], so the neighbors of node 4 are  <<<[0, 6]>>>",
+    "id": 27
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 1 is connected to nodes 3, 0, 2, 5.\nNode 3 is connected to nodes 4, 6.\nNode 0 is connected to nodes 6, 1, 3.\nNode 2 is connected to node 4.\nNode 5 is connected to nodes 1, 7.\nNode 4 is connected to nodes 6, 1, 5.\nNode 6 is connected to nodes 1, 0, 7, 5.\nNode 7 is connected to nodes 6, 3, 2.\nWhich are the neighbor nodes of node 5? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [1, 7], so the neighbors of node 5 are  <<<[1, 7]>>>",
+    "id": 28
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 2 is connected to nodes 1, 0.\nNode 1 is connected to nodes 4, 5, 0.\nNode 0 is connected to node 4.\nNode 4 is connected to nodes 2, 1.\nNode 3 is connected to nodes 1, 4, 5.\nWhich are the neighbor nodes of node 5? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [], so the neighbors of node 5 are  <<<[]>>>",
+    "id": 29
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 3, 0, 2.\nNode 3 is connected to nodes 4, 2, 5.\nNode 0 is connected to node 4.\nNode 2 is connected to nodes 4, 3.\nNode 5 is connected to nodes 3, 1.\nNode 1 is connected to node 5.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [4, 2, 5], so the neighbors of node 3 are  <<<[4, 2, 5]>>>",
+    "id": 30
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 8 is connected to nodes 3, 1, 9, 0, 5, 4, 6.\nNode 3 is connected to nodes 8, 2.\nNode 1 is connected to nodes 8, 5.\nNode 9 is connected to nodes 8, 5, 0.\nNode 0 is connected to nodes 8, 9.\nNode 5 is connected to nodes 8, 2, 7, 9, 6, 4, 1.\nNode 4 is connected to nodes 8, 5, 7.\nNode 6 is connected to nodes 8, 5.\nNode 2 is connected to nodes 3, 5.\nNode 7 is connected to nodes 5, 4.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [8, 2], so the neighbors of node 3 are  <<<[8, 2]>>>",
+    "id": 31
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 1, 6, 0.\nNode 1 is connected to nodes 3, 7.\nNode 6 is connected to nodes 3, 0, 4.\nNode 0 is connected to nodes 3, 6.\nNode 7 is connected to nodes 1, 2.\nNode 4 is connected to node 6.\nNode 5 is connected to node 2.\nNode 2 is connected to nodes 5, 7.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [3, 6], so the neighbors of node 0 are  <<<[3, 6]>>>",
+    "id": 32
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 10 is connected to nodes 5, 6, 1, 3.\nNode 5 is connected to nodes 10, 4, 3.\nNode 6 is connected to nodes 10, 4, 9.\nNode 1 is connected to nodes 10, 2, 4, 3, 8, 7.\nNode 3 is connected to nodes 10, 5, 1, 2, 4, 0, 9.\nNode 4 is connected to nodes 5, 1, 2, 6, 0, 7, 9, 3.\nNode 2 is connected to nodes 1, 3, 4, 9.\nNode 8 is connected to node 1.\nNode 7 is connected to nodes 1, 4, 9.\nNode 9 is connected to nodes 2, 4, 6, 0, 7, 3.\nNode 0 is connected to nodes 4, 3, 9.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [10, 4, 3], so the neighbors of node 5 are  <<<[10, 4, 3]>>>",
+    "id": 33
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 0 is connected to node 7.\nNode 7 is connected to nodes 2, 5.\nNode 6 is connected to nodes 2, 5, 0.\nNode 2 is connected to nodes 5, 3.\nNode 5 is connected to nodes 6, 9.\nNode 9 is connected to node 0.\nNode 1 is connected to nodes 7, 2.\nNode 3 is connected to nodes 2, 5, 6.\nNode 8 is connected to node 7.\nNode 4 is connected to nodes 5, 9, 3.\nWhich are the neighbor nodes of node 5? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [6, 9], so the neighbors of node 5 are  <<<[6, 9]>>>",
+    "id": 34
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 8, 5, 1, 4, 10, 0, 9.\nNode 8 is connected to nodes 3, 6, 1, 4, 2, 0, 9.\nNode 5 is connected to nodes 3, 6, 4, 7, 10, 2, 0, 9.\nNode 1 is connected to nodes 3, 6, 8, 7, 10, 2, 0, 9.\nNode 4 is connected to nodes 3, 6, 8, 5, 7, 10, 0.\nNode 10 is connected to nodes 3, 5, 1, 4, 7, 2, 0, 9.\nNode 0 is connected to nodes 3, 6, 8, 5, 1, 4, 7, 10, 2, 9.\nNode 9 is connected to nodes 3, 8, 5, 1, 7, 10, 2, 0.\nNode 6 is connected to nodes 8, 5, 1, 4, 7, 0.\nNode 7 is connected to nodes 6, 5, 1, 4, 10, 2, 0, 9.\nNode 2 is connected to nodes 8, 5, 1, 7, 10, 0, 9.\nWhich are the neighbor nodes of node 6? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 6 connects to nodes [8, 5, 1, 4, 7, 0], so the neighbors of node 6 are  <<<[8, 5, 1, 4, 7, 0]>>>",
+    "id": 35
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 1 is connected to nodes 7, 2, 5, 4, 6.\nNode 7 is connected to nodes 2, 4, 6, 1.\nNode 2 is connected to nodes 6, 1, 0.\nNode 5 is connected to node 2.\nNode 4 is connected to nodes 3, 0, 2.\nNode 6 is connected to nodes 1, 0, 2, 3.\nNode 0 is connected to nodes 2, 3.\nNode 3 is connected to nodes 6, 7, 2, 5, 4.\nWhich are the neighbor nodes of node 2? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [6, 1, 0], so the neighbors of node 2 are  <<<[6, 1, 0]>>>",
+    "id": 36
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 4, 6, 8, 0.\nNode 4 is connected to nodes 3, 5.\nNode 6 is connected to node 3.\nNode 8 is connected to node 3.\nNode 0 is connected to node 3.\nNode 5 is connected to nodes 4, 7, 1, 2.\nNode 7 is connected to node 5.\nNode 1 is connected to node 5.\nNode 2 is connected to node 5.\nWhich are the neighbor nodes of node 8? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 8 connects to nodes [3], so the neighbors of node 8 are  <<<[3]>>>",
+    "id": 37
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 2, 3.\nNode 2 is connected to nodes 1, 4.\nNode 3 is connected to nodes 1, 5, 4.\nNode 4 is connected to nodes 2, 3.\nNode 5 is connected to nodes 3, 0.\nNode 0 is connected to node 5.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [1, 5, 4], so the neighbors of node 3 are  <<<[1, 5, 4]>>>",
+    "id": 38
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 1, 0, 2, 8, 6, 7, 4.\nNode 1 is connected to nodes 3, 0, 2, 4.\nNode 0 is connected to nodes 3, 1, 5, 8.\nNode 2 is connected to nodes 3, 1, 6.\nNode 8 is connected to nodes 3, 0.\nNode 6 is connected to nodes 3, 2, 7.\nNode 7 is connected to nodes 3, 6.\nNode 4 is connected to nodes 3, 1.\nNode 5 is connected to node 0.\nWhich are the neighbor nodes of node 2? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [3, 1, 6], so the neighbors of node 2 are  <<<[3, 1, 6]>>>",
+    "id": 39
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 8 is connected to nodes 4, 7, 2, 9, 6.\nNode 4 is connected to nodes 8, 7, 0, 2, 3, 9, 10, 6.\nNode 7 is connected to nodes 8, 4, 0, 3, 9, 6.\nNode 2 is connected to nodes 8, 4, 3, 9, 5, 10, 1, 6.\nNode 9 is connected to nodes 8, 4, 7, 0, 2, 10, 1, 6.\nNode 6 is connected to nodes 8, 4, 7, 0, 2, 9, 5, 10, 1.\nNode 0 is connected to nodes 4, 7, 9, 5, 10, 6.\nNode 3 is connected to nodes 4, 7, 2, 1.\nNode 10 is connected to nodes 4, 0, 2, 9, 1, 6.\nNode 5 is connected to nodes 0, 2, 1, 6.\nNode 1 is connected to nodes 2, 3, 9, 5, 10, 6.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [4, 7, 9, 5, 10, 6], so the neighbors of node 0 are  <<<[4, 7, 9, 5, 10, 6]>>>",
+    "id": 40
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 4, 5, 0, 2, 1.\nNode 4 is connected to node 3.\nNode 5 is connected to node 3.\nNode 0 is connected to node 3.\nNode 2 is connected to node 3.\nNode 1 is connected to node 3.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [3], so the neighbors of node 0 are  <<<[3]>>>",
+    "id": 41
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 2, 0, 4.\nNode 2 is connected to nodes 3, 0, 4, 1.\nNode 0 is connected to nodes 3, 2, 4, 1.\nNode 4 is connected to nodes 3, 2, 0, 5, 1.\nNode 1 is connected to nodes 2, 0, 4, 5.\nNode 5 is connected to nodes 4, 1.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [4, 1], so the neighbors of node 5 are  <<<[4, 1]>>>",
+    "id": 42
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 8 is connected to nodes 10, 5.\nNode 10 is connected to nodes 8, 7.\nNode 5 is connected to nodes 8, 0.\nNode 7 is connected to nodes 10, 2, 1.\nNode 0 is connected to nodes 5, 6.\nNode 6 is connected to nodes 0, 11.\nNode 11 is connected to nodes 6, 9, 3.\nNode 9 is connected to node 11.\nNode 3 is connected to nodes 11, 1.\nNode 2 is connected to nodes 7, 4.\nNode 4 is connected to node 2.\nNode 1 is connected to nodes 7, 3.\nWhich are the neighbor nodes of node 10? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 10 connects to nodes [8, 7], so the neighbors of node 10 are  <<<[8, 7]>>>",
+    "id": 43
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 0, 2.\nNode 0 is connected to nodes 4, 5.\nNode 2 is connected to nodes 4, 5.\nNode 5 is connected to nodes 0, 2, 3.\nNode 6 is connected to nodes 3, 1.\nNode 3 is connected to nodes 6, 5.\nNode 1 is connected to node 6.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [0, 2, 3], so the neighbors of node 5 are  <<<[0, 2, 3]>>>",
+    "id": 44
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 3, 4.\nNode 3 is connected to nodes 0, 8.\nNode 4 is connected to nodes 0, 6.\nNode 8 is connected to nodes 3, 5.\nNode 5 is connected to nodes 8, 7.\nNode 7 is connected to nodes 5, 2.\nNode 6 is connected to nodes 4, 1.\nNode 1 is connected to nodes 6, 2.\nNode 2 is connected to nodes 1, 7.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [8, 7], so the neighbors of node 5 are  <<<[8, 7]>>>",
+    "id": 45
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 8 is connected to nodes 0, 2.\nNode 0 is connected to nodes 8, 3.\nNode 2 is connected to nodes 8, 5.\nNode 3 is connected to nodes 0, 4.\nNode 6 is connected to nodes 1, 4.\nNode 1 is connected to nodes 6, 7.\nNode 4 is connected to nodes 6, 3.\nNode 7 is connected to nodes 1, 5.\nNode 5 is connected to nodes 7, 2.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [6, 3], so the neighbors of node 4 are  <<<[6, 3]>>>",
+    "id": 46
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 6 is connected to nodes 2, 3, 0, 5, 1, 8.\nNode 2 is connected to nodes 6, 3.\nNode 3 is connected to nodes 6, 2, 7, 4.\nNode 0 is connected to nodes 6, 5.\nNode 5 is connected to nodes 6, 7, 0, 4, 1.\nNode 1 is connected to nodes 6, 5.\nNode 8 is connected to nodes 6, 4.\nNode 7 is connected to nodes 3, 5.\nNode 4 is connected to nodes 3, 5, 8.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [6, 2, 7, 4], so the neighbors of node 3 are  <<<[6, 2, 7, 4]>>>",
+    "id": 47
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to node 1.\nNode 1 is connected to nodes 4, 0.\nNode 0 is connected to nodes 1, 3, 2.\nNode 3 is connected to nodes 0, 2.\nNode 2 is connected to nodes 3, 0.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [4, 0], so the neighbors of node 1 are  <<<[4, 0]>>>",
+    "id": 48
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 7, 6, 4, 3.\nNode 7 is connected to node 0.\nNode 6 is connected to node 0.\nNode 4 is connected to nodes 0, 5, 2, 1.\nNode 3 is connected to node 0.\nNode 5 is connected to node 4.\nNode 2 is connected to node 4.\nNode 1 is connected to node 4.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [4], so the neighbors of node 1 are  <<<[4]>>>",
+    "id": 49
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 5, 6, 4, 9, 0.\nNode 5 is connected to nodes 1, 3, 0, 9, 7.\nNode 6 is connected to nodes 1, 7, 9.\nNode 4 is connected to nodes 1, 8, 2, 0.\nNode 9 is connected to nodes 1, 5, 3, 6, 7.\nNode 0 is connected to nodes 1, 5, 4, 2.\nNode 3 is connected to nodes 5, 8, 2, 9.\nNode 7 is connected to nodes 5, 8, 6, 9.\nNode 8 is connected to nodes 3, 7, 4.\nNode 2 is connected to nodes 3, 4, 0.\nWhich are the neighbor nodes of node 6? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 6 connects to nodes [1, 7, 9], so the neighbors of node 6 are  <<<[1, 7, 9]>>>",
+    "id": 50
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 7 is connected to nodes 11, 4, 6.\nNode 11 is connected to node 7.\nNode 4 is connected to nodes 7, 2, 9, 3, 0, 1.\nNode 6 is connected to node 7.\nNode 2 is connected to node 4.\nNode 9 is connected to node 4.\nNode 3 is connected to node 4.\nNode 0 is connected to nodes 4, 10, 8.\nNode 1 is connected to nodes 4, 5.\nNode 10 is connected to node 0.\nNode 8 is connected to node 0.\nNode 5 is connected to node 1.\nWhich are the neighbor nodes of node 11? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 11 connects to nodes [7], so the neighbors of node 11 are  <<<[7]>>>",
+    "id": 51
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 4, 3, 1.\nNode 4 is connected to nodes 2, 5.\nNode 3 is connected to nodes 2, 0.\nNode 1 is connected to nodes 2, 5.\nNode 5 is connected to nodes 4, 1.\nNode 0 is connected to node 3.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [2, 5], so the neighbors of node 4 are  <<<[2, 5]>>>",
+    "id": 52
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 11, 1, 2, 5, 10, 6, 9.\nNode 11 is connected to nodes 4, 0.\nNode 1 is connected to nodes 4, 0.\nNode 2 is connected to nodes 4, 10.\nNode 5 is connected to nodes 4, 6.\nNode 10 is connected to nodes 4, 9, 7, 2, 6.\nNode 6 is connected to nodes 4, 10, 3, 0, 5, 8.\nNode 9 is connected to nodes 4, 7, 10.\nNode 0 is connected to nodes 11, 3, 1, 6.\nNode 7 is connected to nodes 9, 10.\nNode 3 is connected to nodes 0, 6, 8.\nNode 8 is connected to nodes 3, 6.\nWhich are the neighbor nodes of node 11? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 11 connects to nodes [4, 0], so the neighbors of node 11 are  <<<[4, 0]>>>",
+    "id": 53
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 3, 6.\nNode 3 is connected to node 5.\nNode 6 is connected to nodes 5, 4, 1, 0, 2.\nNode 4 is connected to node 6.\nNode 1 is connected to node 6.\nNode 0 is connected to node 6.\nNode 2 is connected to nodes 6, 7.\nNode 7 is connected to node 2.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [3, 6], so the neighbors of node 5 are  <<<[3, 6]>>>",
+    "id": 54
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 5, 2.\nNode 5 is connected to nodes 1, 9, 0.\nNode 2 is connected to nodes 1, 6, 4.\nNode 9 is connected to nodes 5, 6.\nNode 0 is connected to node 5.\nNode 7 is connected to node 3.\nNode 3 is connected to nodes 7, 8.\nNode 8 is connected to nodes 3, 4.\nNode 6 is connected to nodes 9, 2.\nNode 4 is connected to nodes 2, 8.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [2, 8], so the neighbors of node 4 are  <<<[2, 8]>>>",
+    "id": 55
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 6 is connected to nodes 1, 5, 8.\nNode 1 is connected to nodes 6, 5, 0.\nNode 5 is connected to nodes 6, 1, 8, 4, 3, 0.\nNode 8 is connected to nodes 6, 7, 5.\nNode 0 is connected to nodes 1, 5.\nNode 7 is connected to nodes 8, 2, 4.\nNode 2 is connected to nodes 7, 4, 3.\nNode 4 is connected to nodes 7, 5, 2.\nNode 3 is connected to nodes 5, 2.\nWhich are the neighbor nodes of node 6? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 6 connects to nodes [1, 5, 8], so the neighbors of node 6 are  <<<[1, 5, 8]>>>",
+    "id": 56
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 1 is connected to node 4.\nNode 4 is connected to nodes 8, 6, 2.\nNode 6 is connected to nodes 0, 9.\nNode 0 is connected to nodes 4, 9.\nNode 9 is connected to nodes 8, 1, 4.\nNode 2 is connected to node 4.\nNode 8 is connected to nodes 6, 0, 7.\nNode 5 is connected to nodes 8, 3, 6, 0, 9.\nNode 3 is connected to nodes 4, 8.\nWhich are the neighbor nodes of node 4? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [8, 6, 2], so the neighbors of node 4 are  <<<[8, 6, 2]>>>",
+    "id": 57
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 0, 4.\nNode 0 is connected to nodes 3, 2.\nNode 4 is connected to nodes 3, 1.\nNode 2 is connected to nodes 0, 1.\nNode 1 is connected to nodes 4, 2.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [3, 1], so the neighbors of node 4 are  <<<[3, 1]>>>",
+    "id": 58
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 6, 3.\nNode 6 is connected to nodes 2, 3, 7, 1.\nNode 3 is connected to nodes 2, 6.\nNode 7 is connected to node 6.\nNode 1 is connected to nodes 6, 5.\nNode 8 is connected to nodes 5, 4.\nNode 5 is connected to nodes 8, 1.\nNode 4 is connected to nodes 8, 0.\nNode 0 is connected to node 4.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [4], so the neighbors of node 0 are  <<<[4]>>>",
+    "id": 59
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to node 4.\nNode 4 is connected to nodes 0, 7, 3.\nNode 7 is connected to nodes 4, 5.\nNode 3 is connected to nodes 4, 5.\nNode 5 is connected to nodes 7, 1, 3.\nNode 1 is connected to nodes 5, 6.\nNode 2 is connected to node 6.\nNode 6 is connected to nodes 2, 1.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [5, 6], so the neighbors of node 1 are  <<<[5, 6]>>>",
+    "id": 60
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 3 is connected to nodes 5, 0, 6, 4.\nNode 5 is connected to nodes 3, 4.\nNode 0 is connected to nodes 3, 7.\nNode 6 is connected to node 3.\nNode 4 is connected to nodes 3, 5.\nNode 1 is connected to nodes 7, 2.\nNode 7 is connected to nodes 1, 0.\nNode 2 is connected to node 1.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [7, 2], so the neighbors of node 1 are  <<<[7, 2]>>>",
+    "id": 61
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 6 is connected to nodes 7, 9, 8, 2, 0.\nNode 7 is connected to nodes 6, 1, 3, 2, 5, 0.\nNode 9 is connected to nodes 6, 8, 0.\nNode 8 is connected to nodes 6, 4, 1, 3, 9, 0.\nNode 2 is connected to nodes 6, 7, 4, 1, 3, 5.\nNode 0 is connected to nodes 6, 7, 4, 9, 8.\nNode 1 is connected to nodes 7, 4, 8, 2, 5.\nNode 3 is connected to nodes 7, 4, 8, 2, 5.\nNode 5 is connected to nodes 7, 1, 3, 2.\nNode 4 is connected to nodes 1, 3, 8, 2, 0.\nWhich are the neighbor nodes of node 2? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [6, 7, 4, 1, 3, 5], so the neighbors of node 2 are  <<<[6, 7, 4, 1, 3, 5]>>>",
+    "id": 62
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 6 is connected to nodes 1, 5, 3, 0, 7.\nNode 1 is connected to nodes 6, 0, 4.\nNode 5 is connected to nodes 6, 2, 4, 7.\nNode 3 is connected to nodes 6, 2, 0.\nNode 0 is connected to nodes 6, 1, 3.\nNode 7 is connected to nodes 6, 5.\nNode 4 is connected to nodes 1, 5.\nNode 2 is connected to nodes 5, 3.\nWhich are the neighbor nodes of node 7? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 7 connects to nodes [6, 5], so the neighbors of node 7 are  <<<[6, 5]>>>",
+    "id": 63
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 4 is connected to nodes 2, 5.\nNode 2 is connected to node 4.\nNode 5 is connected to nodes 6, 3.\nNode 8 is connected to nodes 0, 3, 4.\nNode 0 is connected to nodes 6, 7, 4, 5.\nNode 3 is connected to nodes 1, 6.\nNode 6 is connected to nodes 7, 3, 2, 8, 0.\nNode 7 is connected to node 4.\nWhich are the neighbor nodes of node 1? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [], so the neighbors of node 1 are  <<<[]>>>",
+    "id": 64
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 2 is connected to node 3.\nNode 3 is connected to nodes 4, 2, 1.\nNode 1 is connected to nodes 0, 4.\nNode 0 is connected to node 1.\nNode 4 is connected to nodes 2, 0.\nWhich are the neighbor nodes of node 0? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [1], so the neighbors of node 0 are  <<<[1]>>>",
+    "id": 65
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 2, 4, 6, 3.\nNode 2 is connected to nodes 5, 1, 4, 8, 7, 0, 6, 3.\nNode 4 is connected to nodes 5, 2, 1, 8, 7, 0, 6.\nNode 6 is connected to nodes 5, 2, 4, 7, 0, 3.\nNode 3 is connected to nodes 5, 2, 1, 8, 7, 6.\nNode 1 is connected to nodes 2, 4, 8, 7, 3.\nNode 8 is connected to nodes 2, 1, 4, 3.\nNode 7 is connected to nodes 2, 1, 4, 6, 3.\nNode 0 is connected to nodes 2, 4, 6.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [5, 2, 1, 8, 7, 0, 6], so the neighbors of node 4 are  <<<[5, 2, 1, 8, 7, 0, 6]>>>",
+    "id": 66
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 6 is connected to nodes 2, 4, 10, 0, 3, 7.\nNode 2 is connected to nodes 6, 1, 11.\nNode 4 is connected to nodes 6, 11, 9, 5.\nNode 10 is connected to nodes 6, 1, 3.\nNode 0 is connected to nodes 6, 7, 1.\nNode 3 is connected to nodes 6, 7, 1, 10.\nNode 7 is connected to nodes 6, 0, 5, 8, 3, 9, 1.\nNode 1 is connected to nodes 2, 7, 0, 11, 9, 5, 10, 3, 8.\nNode 11 is connected to nodes 2, 9, 1, 4.\nNode 5 is connected to nodes 7, 4, 1.\nNode 8 is connected to nodes 7, 9, 1.\nNode 9 is connected to nodes 7, 11, 1, 4, 8.\nWhich are the neighbor nodes of node 2? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [6, 1, 11], so the neighbors of node 2 are  <<<[6, 1, 11]>>>",
+    "id": 67
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 2, 6, 0.\nNode 2 is connected to nodes 1, 4, 3.\nNode 6 is connected to node 1.\nNode 0 is connected to nodes 1, 4.\nNode 4 is connected to nodes 2, 5, 0.\nNode 3 is connected to node 2.\nNode 5 is connected to node 4.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [4], so the neighbors of node 5 are  <<<[4]>>>",
+    "id": 68
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 1, 3, 10, 8.\nNode 1 is connected to nodes 2, 4, 0, 7, 9, 10.\nNode 3 is connected to nodes 2, 6, 7, 5, 8.\nNode 10 is connected to nodes 2, 6, 0, 1, 9, 5.\nNode 8 is connected to nodes 2, 3, 7, 5.\nNode 4 is connected to nodes 6, 1, 5.\nNode 6 is connected to nodes 4, 3, 7, 5, 10.\nNode 5 is connected to nodes 4, 6, 3, 7, 9, 10, 8.\nNode 7 is connected to nodes 6, 1, 3, 5, 8.\nNode 0 is connected to nodes 1, 10.\nNode 9 is connected to nodes 1, 5, 10.\nWhich are the neighbor nodes of node 10? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 10 connects to nodes [2, 6, 0, 1, 9, 5], so the neighbors of node 10 are  <<<[2, 6, 0, 1, 9, 5]>>>",
+    "id": 69
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 2 is connected to nodes 3, 5.\nNode 3 is connected to nodes 5, 4.\nNode 5 is connected to nodes 3, 0.\nNode 4 is connected to node 1.\nNode 1 is connected to nodes 3, 5.\nNode 0 is connected to node 4.\nWhich are the neighbor nodes of node 5? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [3, 0], so the neighbors of node 5 are  <<<[3, 0]>>>",
+    "id": 70
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 0, 10, 3, 9.\nNode 0 is connected to nodes 2, 3.\nNode 10 is connected to nodes 2, 7.\nNode 3 is connected to nodes 2, 0, 9, 8, 4, 6, 7, 1.\nNode 9 is connected to nodes 2, 5, 3, 8, 6, 7, 1.\nNode 7 is connected to nodes 10, 9, 3.\nNode 5 is connected to nodes 9, 8.\nNode 8 is connected to nodes 9, 5, 3.\nNode 6 is connected to nodes 9, 3.\nNode 1 is connected to nodes 9, 3.\nNode 4 is connected to node 3.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [9, 8], so the neighbors of node 5 are  <<<[9, 8]>>>",
+    "id": 71
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 0, 9, 4.\nNode 0 is connected to nodes 5, 4, 6, 8.\nNode 9 is connected to nodes 5, 8, 4.\nNode 4 is connected to nodes 5, 0, 8, 1, 9.\nNode 6 is connected to nodes 0, 3, 2, 7, 1.\nNode 8 is connected to nodes 0, 3, 2, 4, 9.\nNode 3 is connected to nodes 8, 7, 6.\nNode 7 is connected to nodes 3, 6, 2, 1.\nNode 2 is connected to nodes 8, 6, 7, 1.\nNode 1 is connected to nodes 6, 2, 7, 4.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [0, 9, 4], so the neighbors of node 5 are  <<<[0, 9, 4]>>>",
+    "id": 72
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 7 is connected to nodes 1, 8, 3, 4.\nNode 1 is connected to nodes 7, 2, 0, 8.\nNode 8 is connected to nodes 7, 1, 2, 3.\nNode 3 is connected to nodes 7, 8, 4, 9.\nNode 4 is connected to nodes 7, 2, 3, 9, 5.\nNode 2 is connected to nodes 1, 8, 4, 5.\nNode 0 is connected to nodes 1, 9, 6.\nNode 5 is connected to nodes 2, 9, 6, 4.\nNode 9 is connected to nodes 3, 0, 6, 4, 5.\nNode 6 is connected to nodes 0, 9, 5.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [1, 9, 6], so the neighbors of node 0 are  <<<[1, 9, 6]>>>",
+    "id": 73
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 6, 3, 1.\nNode 6 is connected to nodes 5, 2, 4.\nNode 3 is connected to node 5.\nNode 1 is connected to nodes 5, 0.\nNode 2 is connected to node 6.\nNode 4 is connected to node 6.\nNode 0 is connected to node 1.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [5], so the neighbors of node 3 are  <<<[5]>>>",
+    "id": 74
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 5, 1, 4, 2, 6, 8, 9, 3.\nNode 5 is connected to nodes 0, 7, 2.\nNode 1 is connected to nodes 0, 2.\nNode 4 is connected to nodes 0, 6.\nNode 2 is connected to nodes 0, 5, 1, 6, 7.\nNode 6 is connected to nodes 0, 2, 3, 9, 4.\nNode 8 is connected to node 0.\nNode 9 is connected to nodes 0, 6.\nNode 3 is connected to nodes 0, 6.\nNode 7 is connected to nodes 5, 2.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [0, 6], so the neighbors of node 4 are  <<<[0, 6]>>>",
+    "id": 75
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 5, 3, 8, 9, 1, 6, 0.\nNode 5 is connected to nodes 2, 1, 6, 9, 8, 7.\nNode 3 is connected to nodes 2, 9, 7, 8.\nNode 8 is connected to nodes 2, 5, 3, 9.\nNode 9 is connected to nodes 2, 5, 1, 3, 8, 7, 0, 4, 6.\nNode 1 is connected to nodes 2, 5, 9.\nNode 6 is connected to nodes 2, 5, 9.\nNode 0 is connected to nodes 2, 9.\nNode 7 is connected to nodes 5, 3, 9.\nNode 4 is connected to node 9.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [2, 1, 6, 9, 8, 7], so the neighbors of node 5 are  <<<[2, 1, 6, 9, 8, 7]>>>",
+    "id": 76
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 10 is connected to nodes 5, 8.\nNode 5 is connected to nodes 10, 1.\nNode 8 is connected to nodes 10, 7, 11, 4.\nNode 1 is connected to nodes 5, 0.\nNode 7 is connected to nodes 8, 2.\nNode 11 is connected to nodes 8, 6, 4.\nNode 4 is connected to nodes 8, 11.\nNode 0 is connected to nodes 1, 3.\nNode 3 is connected to node 0.\nNode 2 is connected to nodes 7, 9.\nNode 9 is connected to node 2.\nNode 6 is connected to node 11.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [5, 0], so the neighbors of node 1 are  <<<[5, 0]>>>",
+    "id": 77
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 1, 6.\nNode 1 is connected to node 5.\nNode 6 is connected to nodes 5, 2, 4, 10, 3, 0.\nNode 2 is connected to node 6.\nNode 4 is connected to node 6.\nNode 10 is connected to node 6.\nNode 3 is connected to nodes 6, 8, 7.\nNode 0 is connected to node 6.\nNode 8 is connected to nodes 3, 9.\nNode 7 is connected to node 3.\nNode 9 is connected to node 8.\nWhich are the neighbor nodes of node 5? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [1, 6], so the neighbors of node 5 are  <<<[1, 6]>>>",
+    "id": 78
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 8, 11, 7, 4, 2, 9, 10.\nNode 8 is connected to nodes 1, 0, 4, 11.\nNode 11 is connected to nodes 1, 8, 3, 7, 2.\nNode 7 is connected to nodes 1, 3, 11, 6.\nNode 4 is connected to nodes 1, 8, 9, 5.\nNode 2 is connected to nodes 1, 11.\nNode 9 is connected to nodes 1, 3, 4.\nNode 10 is connected to nodes 1, 3, 6, 0.\nNode 0 is connected to nodes 8, 5, 10.\nNode 3 is connected to nodes 9, 11, 10, 5, 7.\nNode 5 is connected to nodes 3, 4, 6, 0.\nNode 6 is connected to nodes 7, 5, 10.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [9, 11, 10, 5, 7], so the neighbors of node 3 are  <<<[9, 11, 10, 5, 7]>>>",
+    "id": 79
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 2, 7, 6, 5.\nNode 2 is connected to nodes 0, 1.\nNode 7 is connected to nodes 0, 4, 5.\nNode 6 is connected to node 0.\nNode 5 is connected to nodes 0, 7, 3, 8.\nNode 1 is connected to node 2.\nNode 4 is connected to node 7.\nNode 3 is connected to node 5.\nNode 8 is connected to node 5.\nWhich are the neighbor nodes of node 8? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 8 connects to nodes [5], so the neighbors of node 8 are  <<<[5]>>>",
+    "id": 80
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 5 is connected to node 1.\nNode 1 is connected to nodes 6, 4.\nNode 6 is connected to node 1.\nNode 4 is connected to nodes 0, 6, 3.\nNode 3 is connected to nodes 4, 0, 2, 6.\nNode 0 is connected to nodes 2, 5, 6, 3.\nNode 2 is connected to nodes 3, 4.\nWhich are the neighbor nodes of node 5? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 5 connects to nodes [1], so the neighbors of node 5 are  <<<[1]>>>",
+    "id": 81
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 7 is connected to nodes 4, 2, 1, 6, 0.\nNode 4 is connected to node 7.\nNode 2 is connected to node 7.\nNode 1 is connected to node 7.\nNode 6 is connected to nodes 7, 8.\nNode 0 is connected to node 7.\nNode 8 is connected to nodes 6, 3, 5.\nNode 3 is connected to node 8.\nNode 5 is connected to node 8.\nWhich are the neighbor nodes of node 8? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 8 connects to nodes [6, 3, 5], so the neighbors of node 8 are  <<<[6, 3, 5]>>>",
+    "id": 82
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 4 is connected to nodes 1, 9, 6, 2.\nNode 1 is connected to nodes 8, 0.\nNode 9 is connected to nodes 7, 1.\nNode 6 is connected to node 2.\nNode 2 is connected to nodes 1, 5, 9.\nNode 0 is connected to nodes 9, 6, 2.\nNode 7 is connected to nodes 6, 0.\nNode 8 is connected to nodes 3, 9, 6, 2.\nNode 5 is connected to nodes 3, 1.\nNode 3 is connected to nodes 9, 5.\nWhich are the neighbor nodes of node 6? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 6 connects to nodes [2], so the neighbors of node 6 are  <<<[2]>>>",
+    "id": 83
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 0, 2.\nNode 0 is connected to nodes 5, 7.\nNode 2 is connected to node 5.\nNode 7 is connected to nodes 0, 8, 4.\nNode 8 is connected to nodes 7, 3, 6.\nNode 3 is connected to nodes 8, 4.\nNode 6 is connected to nodes 8, 1.\nNode 4 is connected to nodes 7, 3.\nNode 1 is connected to node 6.\nWhich are the neighbor nodes of node 7? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 7 connects to nodes [0, 8, 4], so the neighbors of node 7 are  <<<[0, 8, 4]>>>",
+    "id": 84
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 7, 2.\nNode 7 is connected to nodes 4, 6, 5.\nNode 2 is connected to nodes 4, 6, 0, 8, 5, 1.\nNode 6 is connected to nodes 0, 7, 3, 8, 2.\nNode 0 is connected to nodes 6, 3, 2.\nNode 3 is connected to nodes 6, 0, 5.\nNode 8 is connected to nodes 6, 2, 5.\nNode 5 is connected to nodes 7, 3, 8, 2.\nNode 1 is connected to node 2.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [7, 2], so the neighbors of node 4 are  <<<[7, 2]>>>",
+    "id": 85
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 0, 7, 1.\nNode 0 is connected to nodes 5, 6, 7, 1, 2.\nNode 7 is connected to nodes 5, 6, 0, 3, 1, 2.\nNode 1 is connected to nodes 5, 6, 4, 0, 7.\nNode 6 is connected to nodes 0, 3, 7, 1, 2.\nNode 3 is connected to nodes 6, 7, 2.\nNode 2 is connected to nodes 6, 4, 0, 3, 7.\nNode 4 is connected to nodes 1, 2.\nWhich are the neighbor nodes of node 6? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 6 connects to nodes [0, 3, 7, 1, 2], so the neighbors of node 6 are  <<<[0, 3, 7, 1, 2]>>>",
+    "id": 86
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 11 is connected to nodes 7, 0, 4, 10, 6, 1, 5, 2, 3.\nNode 7 is connected to nodes 11, 10, 9, 4, 0, 8, 5.\nNode 0 is connected to nodes 11, 7, 4.\nNode 4 is connected to nodes 11, 7, 0, 1, 6, 2.\nNode 10 is connected to nodes 11, 7, 5.\nNode 6 is connected to nodes 11, 1, 4.\nNode 1 is connected to nodes 11, 6, 4, 9, 3, 8.\nNode 5 is connected to nodes 11, 7, 10, 3.\nNode 2 is connected to nodes 11, 4.\nNode 3 is connected to nodes 11, 5, 1, 9, 8.\nNode 9 is connected to nodes 7, 1, 3.\nNode 8 is connected to nodes 7, 1, 3.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [11, 7, 4], so the neighbors of node 0 are  <<<[11, 7, 4]>>>",
+    "id": 87
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 11 is connected to nodes 5, 6.\nNode 5 is connected to nodes 3, 1, 9.\nNode 2 is connected to nodes 7, 6.\nNode 7 is connected to node 6.\nNode 4 is connected to node 3.\nNode 3 is connected to nodes 9, 5.\nNode 1 is connected to node 4.\nNode 9 is connected to nodes 8, 3, 4.\nNode 8 is connected to nodes 2, 1.\nNode 0 is connected to nodes 10, 7, 1, 8.\nWhich are the neighbor nodes of node 1? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [4], so the neighbors of node 1 are  <<<[4]>>>",
+    "id": 88
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 8 is connected to nodes 6, 2, 10, 4.\nNode 6 is connected to nodes 2, 4.\nNode 2 is connected to nodes 10, 3, 11, 9, 6.\nNode 10 is connected to nodes 7, 11, 5.\nNode 4 is connected to nodes 0, 5, 9, 8.\nNode 3 is connected to nodes 11, 5, 8, 10.\nNode 11 is connected to nodes 1, 9, 7.\nNode 9 is connected to nodes 4, 7, 5.\nNode 7 is connected to nodes 5, 9, 8, 6, 2, 3.\nNode 5 is connected to nodes 6, 0, 3, 11.\nNode 0 is connected to nodes 7, 1, 5, 8, 2, 10.\nNode 1 is connected to node 9.\nWhich are the neighbor nodes of node 7? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 7 connects to nodes [5, 9, 8, 6, 2, 3], so the neighbors of node 7 are  <<<[5, 9, 8, 6, 2, 3]>>>",
+    "id": 89
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a directed graph with the following connections:\nNode 11 is connected to nodes 5, 9, 8, 3, 7.\nNode 5 is connected to node 8.\nNode 9 is connected to nodes 1, 8, 3, 0, 2, 10.\nNode 8 is connected to nodes 4, 11.\nNode 3 is connected to nodes 7, 6, 1.\nNode 7 is connected to nodes 4, 9, 6, 1, 0.\nNode 10 is connected to nodes 5, 2, 4.\nNode 2 is connected to nodes 7, 4, 5.\nNode 4 is connected to nodes 11, 5, 7.\nNode 1 is connected to nodes 3, 0, 5, 9, 6.\nNode 0 is connected to nodes 4, 10.\nNode 6 is connected to nodes 8, 0.\nWhich are the neighbor nodes of node 11? In the context of a directed graph, we consider a node's successors as its neighbors. ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 11 connects to nodes [5, 9, 8, 3, 7], so the neighbors of node 11 are  <<<[5, 9, 8, 3, 7]>>>",
+    "id": 90
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 1, 3, 5, 2, 4.\nNode 1 is connected to node 0.\nNode 3 is connected to node 0.\nNode 5 is connected to node 0.\nNode 2 is connected to node 0.\nNode 4 is connected to node 0.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [0], so the neighbors of node 1 are  <<<[0]>>>",
+    "id": 91
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 0, 3.\nNode 0 is connected to nodes 1, 3, 4.\nNode 3 is connected to nodes 1, 0.\nNode 4 is connected to nodes 0, 2.\nNode 2 is connected to node 4.\nWhich are the neighbor nodes of node 3? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 3 connects to nodes [1, 0], so the neighbors of node 3 are  <<<[1, 0]>>>",
+    "id": 92
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 5 is connected to nodes 1, 4, 0.\nNode 1 is connected to nodes 5, 0.\nNode 4 is connected to nodes 5, 2.\nNode 0 is connected to nodes 5, 1.\nNode 2 is connected to nodes 4, 3.\nNode 3 is connected to node 2.\nWhich are the neighbor nodes of node 2? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [4, 3], so the neighbors of node 2 are  <<<[4, 3]>>>",
+    "id": 93
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 1 is connected to nodes 0, 6.\nNode 0 is connected to node 1.\nNode 6 is connected to nodes 1, 4.\nNode 4 is connected to nodes 6, 7, 8, 2.\nNode 7 is connected to node 4.\nNode 8 is connected to node 4.\nNode 2 is connected to nodes 4, 5.\nNode 5 is connected to nodes 2, 3.\nNode 3 is connected to node 5.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [1], so the neighbors of node 0 are  <<<[1]>>>",
+    "id": 94
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 1, 4.\nNode 1 is connected to nodes 2, 0.\nNode 4 is connected to nodes 2, 3.\nNode 0 is connected to node 1.\nNode 3 is connected to node 4.\nWhich are the neighbor nodes of node 4? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 4 connects to nodes [2, 3], so the neighbors of node 4 are  <<<[2, 3]>>>",
+    "id": 95
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 7 is connected to nodes 3, 5, 6.\nNode 3 is connected to nodes 7, 1.\nNode 5 is connected to node 7.\nNode 6 is connected to nodes 7, 0, 1.\nNode 1 is connected to nodes 3, 6.\nNode 2 is connected to nodes 0, 4.\nNode 0 is connected to nodes 2, 6.\nNode 4 is connected to node 2.\nWhich are the neighbor nodes of node 7? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 7 connects to nodes [3, 5, 6], so the neighbors of node 7 are  <<<[3, 5, 6]>>>",
+    "id": 96
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 4 is connected to nodes 8, 0, 1, 2.\nNode 8 is connected to nodes 4, 0, 5, 2.\nNode 0 is connected to nodes 4, 8, 9, 1, 6.\nNode 1 is connected to nodes 4, 7, 0, 2.\nNode 2 is connected to nodes 4, 3, 8, 5, 1, 6.\nNode 7 is connected to node 1.\nNode 3 is connected to nodes 9, 2, 6.\nNode 9 is connected to nodes 3, 0, 6.\nNode 6 is connected to nodes 3, 0, 9, 5, 2.\nNode 5 is connected to nodes 8, 2, 6.\nWhich are the neighbor nodes of node 2? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 2 connects to nodes [4, 3, 8, 5, 1, 6], so the neighbors of node 2 are  <<<[4, 3, 8, 5, 1, 6]>>>",
+    "id": 97
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 2 is connected to nodes 4, 5.\nNode 4 is connected to nodes 2, 0, 3.\nNode 5 is connected to nodes 2, 1.\nNode 0 is connected to nodes 4, 1.\nNode 3 is connected to nodes 4, 7.\nNode 1 is connected to nodes 5, 0.\nNode 6 is connected to node 7.\nNode 7 is connected to nodes 6, 3.\nWhich are the neighbor nodes of node 1? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 1 connects to nodes [5, 0], so the neighbors of node 1 are  <<<[5, 0]>>>",
+    "id": 98
+  },
+  {
+    "instruction": "The following is a question related to the graph reasoning task NEIGHBOR. Please answer the question step by step and format your final response as <<<ANSWER>>>. For example, if your answer is [1, 2, 3], please format your answer as <<<[1, 2, 3]>>>. \nGiven a undirected graph with the following connections:\nNode 0 is connected to nodes 4, 5, 1, 3.\nNode 4 is connected to nodes 0, 2, 5, 1, 3.\nNode 5 is connected to nodes 0, 4, 2, 1, 3.\nNode 1 is connected to nodes 0, 4, 5, 3.\nNode 3 is connected to nodes 0, 4, 2, 5, 1.\nNode 2 is connected to nodes 4, 5, 3.\nWhich are the neighbor nodes of node 0? ",
+    "input": "",
+    "output": "Let's solve it step by step.\nNode 0 connects to nodes [4, 5, 1, 3], so the neighbors of node 0 are  <<<[4, 5, 1, 3]>>>",
+    "id": 99
+  }
+]

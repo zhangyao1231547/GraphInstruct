@@ -17,7 +17,7 @@ QWEN_TRAINING_DIR="${TRAINING_BASE_DIR}/qwen_ljm"
 # 默认模型类型
 #MODEL_TYPE="${MODEL_TYPE:-llama}"  # llama 或 qwen
 MODEL_TYPE="qwen"
-MAX_SAMPLES_PER_TASK=1000
+MAX_SAMPLES_PER_TASK=10000
 # 模型路径配置
 LLAMA_MODEL_PATH="/nvme0/work/workspaces-zy/model/Llama-3.1-8B-Instruct/LLM-Research/Meta-Llama-3.1-8B-Instruct"
 QWEN_MODEL_PATH="/nvme0/work/workspaces-zy/model/Qwen3-4B-Instruct-2507/Qwen/Qwen3-4B-Instruct-2507"
@@ -124,7 +124,7 @@ if [ "$MODEL_TYPE" = "qwen" ] || [ "$MODEL_TYPE" = "both" ]; then
         PREPARE_ARGS="${PREPARE_ARGS} --max-samples ${MAX_SAMPLES_PER_TASK}"
     fi
 
-    python3 "${SCRIPT_DIR}/prepare_training_data_qwen_with_graph_encoding.py" ${PREPARE_ARGS}
+    python3 "${SCRIPT_DIR}/prepare_training_data_qwen_with_vgae.py" ${PREPARE_ARGS}
 fi
 
 echo ""
