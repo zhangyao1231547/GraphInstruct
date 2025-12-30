@@ -1,6 +1,29 @@
-# GraphInstruct 数据转换工具
+# GraphInstruct 脚本工具集
 
 将 GraphInstruct 数据集转换为 GraphAgent 训练所需的格式，支持 **LLaMA** 和 **Qwen** 两种模型。
+
+## 目录结构
+
+```
+script/
+├── data_processing/          # 数据处理
+│   ├── conversion/           # 格式转换（Alpaca→对话格式、PT→JSON等）
+│   ├── preparation/          # 数据准备（训练数据tokenization、图编码等）
+│   ├── generation/           # 数据生成（多语言任务、GNN训练数据等）
+│   ├── translation/          # 翻译脚本（英文→中文）
+│   └── fix/                  # 数据修复（格式修复、结构修复等）
+├── evaluation/               # 模型评估
+│   ├── scripts/              # 评估脚本（GNN模型、API模型、纯文本模型等）
+│   └── runners/              # 评估执行脚本
+├── training/                 # 训练相关
+│   └── runners/              # 训练执行脚本
+├── reporting/                # 报告生成（综合报告、评估报告、图表等）
+├── utils/                    # 工具脚本
+├── logs/                     # 日志文件
+├── dataset_generation/       # 数据集生成（原始）
+├── meta_generation/          # 元数据生成（原始）
+└── graph_autoencoder/        # 图自动编码器
+```
 
 ## 概述
 
@@ -38,16 +61,16 @@ GraphInstruct 数据集包含 19 种图推理任务，每种任务 10,000 条数
 cd /nvme0/work/workspaces-zy/GraphInstruct
 
 # 生成 LLaMA 格式数据 (默认)
-bash script/run_conversion.sh --llama
+bash script/data_processing/conversion/run_conversion.sh --llama
 
 # 生成 Qwen 格式数据
-bash script/run_conversion.sh --qwen
+bash script/data_processing/conversion/run_conversion.sh --qwen
 
 # 同时生成两种格式
-bash script/run_conversion.sh --both
+bash script/data_processing/conversion/run_conversion.sh --both
 
 # 测试模式 (每个任务10条)
-bash script/run_conversion.sh --both --max-samples 10
+bash script/data_processing/conversion/run_conversion.sh --both --max-samples 10
 ```
 
 ### 2. 分步执行
@@ -55,7 +78,7 @@ bash script/run_conversion.sh --both --max-samples 10
 #### Step 1: 转换数据格式 (Alpaca → 对话格式)
 
 ```bash
-python3 script/convert_to_graphagent.py \
+python3 script/data_processing/conversion/convert_to_graphagent.py \
     --input-dir LLaMAFactory/data/reasoning \
     --output-dir data/converted \
     --chinese  # 使用中文提示，或 --english 使用英文
@@ -64,7 +87,7 @@ python3 script/convert_to_graphagent.py \
 #### Step 2a: 生成 LLaMA 训练数据
 
 ```bash
-python3 script/prepare_training_data.py \
+python3 script/data_processing/preparation/prepare_training_data.py \
     --input-dir data/converted \
     --output-dir data/training/llama \
     --model-path /path/to/llama/model \
@@ -74,7 +97,7 @@ python3 script/prepare_training_data.py \
 #### Step 2b: 生成 Qwen 训练数据
 
 ```bash
-python3 script/prepare_training_data_qwen.py \
+python3 script/data_processing/preparation/prepare_training_data_qwen.py \
     --input-dir data/converted \
     --output-dir data/training/qwen \
     --model-path /path/to/qwen/model \
@@ -262,12 +285,75 @@ Options:
 
 ## 脚本文件说明
 
+### 数据处理 (data_processing/)
+
+#### conversion/ - 格式转换
 | 文件 | 功能 |
 |------|------|
 | `convert_to_graphagent.py` | 将 Alpaca 格式转换为 GraphAgent 对话格式，解析图结构 |
+| `convert_*_to_text_json.py` | 将 PyTorch 格式数据转换为纯文本 JSON 格式 |
+| `convert_to_chinese_training_data.py` | 生成中文训练数据 |
+| `run_conversion.sh` | 一键运行转换脚本 |
+
+#### preparation/ - 数据准备
+| 文件 | 功能 |
+|------|------|
 | `prepare_training_data.py` | 生成 **LLaMA** 格式的训练数据 (.pt) |
 | `prepare_training_data_qwen.py` | 生成 **Qwen** 格式的训练数据 (.pt) |
-| `run_conversion.sh` | 一键运行脚本，支持选择模型类型 |
+| `prepare_training_data_qwen_with_graph_encoding.py` | 生成带图编码的 Qwen 训练数据 |
+| `prepare_evaluation_data.py` | 准备评估数据集 |
+
+#### generation/ - 数据生成
+| 文件 | 功能 |
+|------|------|
+| `create_multilang_tasks.py` | 创建多语言任务数据 |
+| `generate_gnn_training_data.py` | 生成 GNN 训练数据 |
+| `create_chinese_eval_data.py` | 创建中文评估数据 |
+
+#### translation/ - 翻译
+| 文件 | 功能 |
+|------|------|
+| `translate_en_to_zh.py` | 英文翻译为中文 |
+| `translate_three_tasks.py` | 翻译特定三个任务 |
+
+#### fix/ - 数据修复
+| 文件 | 功能 |
+|------|------|
+| `fix_chinese_data_structure.py` | 修复中文数据结构 |
+| `fix_evaluation_data.py` | 修复评估数据 |
+| `fix_multilang_tasks.py` | 修复多语言任务数据 |
+
+### 模型评估 (evaluation/)
+
+#### scripts/ - 评估脚本
+| 文件 | 功能 |
+|------|------|
+| `evaluate_gnn_model.py` | 评估 GNN 模型 |
+| `evaluate_api_model.py` | 评估 API 模型 |
+| `evaluate_text_only.py` | 评估纯文本模型 |
+
+#### runners/ - 执行脚本
+| 文件 | 功能 |
+|------|------|
+| `run_gnn_model_evaluation.sh` | 运行 GNN 模型评估 |
+| `run_chinese_evaluation.sh` | 运行中文评估 |
+| `run_all_evaluation.sh` | 运行所有评估 |
+
+### 训练 (training/)
+
+| 文件 | 功能 |
+|------|------|
+| `train_qwen32b_graphinstruct.sh` | 训练 Qwen 32B 模型 |
+| `pl_train_directed_gnn_stage3_graphinstruct.sh` | PyTorch Lightning GNN 训练 |
+
+### 报告生成 (reporting/)
+
+| 文件 | 功能 |
+|------|------|
+| `generate_comprehensive_report.py` | 生成综合评估报告 |
+| `generate_evaluation_report.py` | 生成评估报告 |
+| `generate_svg_charts.py` | 生成 SVG 图表 |
+| `recalculate_metrics.py` | 重新计算评估指标 |
 
 ## 引用
 
